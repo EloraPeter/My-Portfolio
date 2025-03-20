@@ -91,6 +91,10 @@ nav a {
     transition: background 0.3s;
 }
 
+.dark-mode-toggle i{
+    color: var(--text-color);
+}
+
 /* Hero Section */
 #hero {
     text-align: left;
