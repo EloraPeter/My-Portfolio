@@ -529,7 +529,7 @@ body.dark .c-item p {
 }
 
 .view-more-btn:active {
-    transform: scale(0.95); /* Added press effect on click */
+    transform: scale(0.95);
 }
 
 /* Dark Mode Adjustments */
@@ -716,7 +716,7 @@ form .btn2 {
 .copyright {
     width: 100%;
     text-align: center;
-    padding: 25px 0;
+    padding: 20px 0;
     background: rgba(0, 0, 0, var(--opacity4));
     font-weight: 300;
     margin-top: 20px;
@@ -729,7 +729,7 @@ form .btn2 {
 
 #designer{
     font-size: 11px;
-    
+
 }
 
 @keyframes slideIn {
@@ -742,42 +742,6 @@ form .btn2 {
         opacity: 1;
     }
 }
-
-/* Dark Mode Adjustments */
-/* body.dark #contact {
-    background: var(--bg-color);
-}
-
-body.dark .contact-left p,
-body.dark .contact-left p a,
-body.dark .copyright {
-    color: var(--text-color);
-}
-
-body.dark .contact-left p a:hover,
-body.dark .social-icons a:hover {
-    color: var(--primary-color);
-}
-
-body.dark .social-icons a {
-    color: var(--accent-color);
-}
-
-body.dark .btn.btn2 {
-    background: var(--primary-color);
-    color: var(--text-color);
-}
-
-body.dark .btn.btn2:hover {
-    background: var(--accent-color);
-}
-
-body.dark form input,
-body.dark form textarea {
-    background: var(--accent-color);
-    color: var(--text-color);
-    border-color: var(--primary-color);
-} */
 
 /* Responsive Design */
 @media(min-width: 768px) {
