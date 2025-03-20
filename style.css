@@ -373,11 +373,11 @@ body.dark .c-item p {
     border-radius: 25px;
     outline: none;
     font-size: 1rem;
-    transition: border-color 0.3s ease;
-}
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */}
 
 #searchInput:focus {
     border-color: var(--primary-color);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Added subtle shadow on focus */
 }
 
 #search-btn {
@@ -386,6 +386,7 @@ body.dark .c-item p {
     top: 50%;
     transform: translateY(-50%);
     color: var(--accent-color);
+    
 }
 
 #searchInput:focus + #search-btn {
@@ -412,13 +413,25 @@ body.dark .c-item p {
     background: var(--accent-color, #f0f0f0);
     font-weight: 600;
     font-size: 0.9rem;
-    transition: background 0.3s, color 0.3s;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Added transform transition */
 }
 
 .filter-btn:hover,
 .filter-btn.active {
     background: var(--primary-color, #333);
     color: white;
+}
+
+.filter-btn:hover {
+    transform: scale(1.05); /* Added scale on hover */
+}
+
+.filter-btn.active {
+    transform: scale(1.1); /* Added scale for active state */
+}
+
+.filter-btn:active {
+    transform: scale(0.95); /* Added press effect on click */
 }
 
 /* Project Grid */
@@ -434,12 +447,15 @@ body.dark .c-item p {
     padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: block; /* Default state */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease, height 0.5s ease; /* Added opacity and height transitions */
+    height: auto; /* Default height for animation */
+    overflow: hidden; /* Prevent content spillover during animation */
 }
 
 .project-item.hidden {
-    display: none; /* Completely hide instead of fading */
+    display: none;     
+    transform: translateY(20px); /* Slide down effect */
 }
 
 .project-item:hover {
@@ -499,13 +515,17 @@ body.dark .c-item p {
     color: white;
     font-weight: 600;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Added transform and box-shadow transitions */}
 
 .view-more-btn:hover {
     background: var(--accent-color);
     color: var(--text-color);
-    transform: scale(1.05);
+    transform: scale(1.05); /* Added scale on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
+}
+
+.view-more-btn:active {
+    transform: scale(0.95); /* Added press effect on click */
 }
 
 /* Dark Mode Adjustments */
