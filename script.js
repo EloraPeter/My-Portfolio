@@ -1,3 +1,9 @@
+
+
+
+
+
+
 // Dark mode toggle functionality
 const toggleDark = document.getElementById('toggleDark');
 // Toggle dark mode and update UI/localStorage
@@ -51,53 +57,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
-//project search and filter functionality
-// document.addEventListener("DOMContentLoaded", () => {
-//     const toggleFilter = document.getElementById("toggleFilter");
-//     const filterButtons = document.getElementById("filterButtons");
-//     const searchInput = document.getElementById("searchInput");
-//     const projectItems = document.querySelectorAll(".project-item");
-//     const filterBtns = document.querySelectorAll(".filter-btn");
-
-//     // Toggle filter buttons visibility
-//     toggleFilter.addEventListener("click", () => {
-//         filterButtons.classList.toggle("hidden");
-//     });
-
-//     // Filtering functionality
-//     filterBtns.forEach(button => {
-//         button.addEventListener("click", () => {
-//             filterBtns.forEach(btn => btn.classList.remove("active"));
-//             button.classList.add("active");
-
-//             const filterCategory = button.dataset.filter;
-//             projectItems.forEach(project => {
-//                 if (filterCategory === "all" || project.dataset.category === filterCategory) {
-//                     project.classList.remove("hide");
-//                 } else {
-//                     project.classList.add("hide");
-//                 }
-//             });
-//         });
-//     });
-
-//     // Search functionality
-//     searchInput.addEventListener("input", (e) => {
-//         const searchText = e.target.value.toLowerCase();
-
-//         projectItems.forEach(project => {
-//             const projectName = project.dataset.name.toLowerCase();
-//             const projectCategory = project.dataset.category.toLowerCase();
-
-//             if (projectName.includes(searchText) || projectCategory.includes(searchText)) {
-//                 project.classList.remove("hide");
-//             } else {
-//                 project.classList.add("hide");
-//             }
-//         });
-//     });
-// });
 
 
 document.addEventListener("DOMContentLoaded", () => {
