@@ -679,9 +679,9 @@ body.dark .view-more-btn:hover {
 form input,
 form textarea {
     width: 90%;
-    border: 1px solid var(--accent-color);
+    /* border: 1px solid var(--accent-color); */
     outline: none;
-    background: var(--bg-color);
+    background: var(--acc);
     padding: 15px;
     margin: 15px 0;
     color: var(--text-color);
@@ -697,7 +697,7 @@ form textarea:focus {
 
 form textarea {
     resize: vertical;
-    min-height: 100px;
+    /* min-height: 100px; */
 }
 
 form .btn2 {
