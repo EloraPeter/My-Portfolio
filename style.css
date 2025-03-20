@@ -584,14 +584,6 @@ body.dark .view-more-btn:hover {
     margin: 0 auto;
 }
 
-#contact .sub-title {
-    font-size: 2rem;
-    color: var(--text-color);
-    margin-bottom: 2rem;
-    text-align: center;
-    font-weight: bold;
-}
-
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -603,6 +595,14 @@ body.dark .view-more-btn:hover {
     flex-basis: 40%;
     min-width: 300px;
     margin-left: 3rem;
+}
+
+#contact .sub-title {
+    font-size: 4rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    text-align: left;
+    font-weight: bold;
 }
 
 .contact-right {
