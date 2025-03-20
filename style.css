@@ -697,8 +697,8 @@ form textarea {
     border: none;
     outline: none;
     background: var(--accent-color);
-    padding: 15px;
-    margin: 15px 0;
+    padding: 20px;
+    margin: 10px 0;
     color: var(--text-color);
     font-size: 18px;
     border-radius: 6px;
