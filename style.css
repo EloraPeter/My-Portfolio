@@ -680,6 +680,7 @@ form input,
 form textarea {
     width: 90%;
     /* border: 1px solid var(--accent-color); */
+    border: none;
     outline: none;
     background: var(--accent-color);
     padding: 15px;
@@ -687,12 +688,12 @@ form textarea {
     color: var(--text-color);
     font-size: 18px;
     border-radius: 6px;
-    transition: border-color 0.3s ease, background 0.3s ease;
+    transition: border 0.3s ease, background 0.3s ease;
 }
 
 form input:focus,
 form textarea:focus {
-    border-color: var(--primary-color);
+        border: 2px solid var(--primary-color);
 }
 
 form textarea {
