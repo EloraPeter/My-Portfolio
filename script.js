@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 aboutSection.classList.toggle("visible", entry.isIntersecting);
             });
         },
-        { threshold: 0.2 }
+        { threshold: 0.1 }
     );
     observer.observe(aboutSection);
 });
