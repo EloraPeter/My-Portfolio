@@ -681,7 +681,7 @@ form textarea {
     width: 90%;
     /* border: 1px solid var(--accent-color); */
     outline: none;
-    background: var(--acc);
+    background: var(--accent-color);
     padding: 15px;
     margin: 15px 0;
     color: var(--text-color);
@@ -738,7 +738,7 @@ form .btn2 {
 }
 
 /* Dark Mode Adjustments */
-body.dark #contact {
+/* body.dark #contact {
     background: var(--bg-color);
 }
 
@@ -771,7 +771,7 @@ body.dark form textarea {
     background: var(--accent-color);
     color: var(--text-color);
     border-color: var(--primary-color);
-}
+} */
 
 /* Responsive Design */
 @media(min-width: 768px) {
