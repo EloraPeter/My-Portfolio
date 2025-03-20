@@ -1,0 +1,141 @@
+<!-- Certificate Section -->
+<div class="certificates">
+    <h2>Certificates</h2>
+    <div class="certificate-container">
+        <div class="c-item">
+            <img src="images/Coursera GDQDDSARRGA3.jpg" alt="Certificate 1" data-large="images/Coursera GDQDDSARRGA3.jpg" />
+            <p></p>
+        </div>
+        <div class="c-item">
+            <img src="images/Coursera GHYTHHXYK8QC.jpg" alt="Certificate 2" data-large="images/Coursera GHYTHHXYK8QC.jpg" />
+            <p></p>
+        </div>
+        <div class="c-item">
+            <img src="images/Coursera MELX8GBLGXJ8.jpg" alt="Certificate 3" data-large="images/Coursera MELX8GBLGXJ8.jpg" />
+            <p></p>
+        </div>
+        <div class="c-item">
+            <img src="images/Coursera U98D374PZKPH.jpg" alt="Certificate 4" data-large="images/Coursera U98D374PZKPH.jpg" />
+            <p></p>
+        </div>
+        <div class="c-item">
+            <img src="images/Coursera ZU7LRWRSDU4D.jpg" alt="Certificate 5" data-large="images/Coursera ZU7LRWRSDU4D.jpg" />
+            <p></p>
+        </div>
+    </div>
+    <!-- Modal for enlarged image -->
+    <div class="modal" id="imageModal">
+        <img class="modal-content" id="enlargedImg" />
+    </div>
+</div>
+
+<style>
+/* Existing CSS */
+.certificates {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: var(--bg-color);
+}
+
+.certificates h2 {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+.certificate-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.c-item {
+    background: var(--accent-color);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+    cursor: pointer; /* Hint it’s clickable */
+}
+
+.c-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.c-item p {
+    color: var(--text-color);
+    font-size: 1rem;
+    margin-top: 0.8rem;
+    font-weight: 500;
+}
+
+.c-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Dark Mode */
+body.dark .c-item {
+    background: var(--primary-color);
+    box-shadow: 0 4px 8px rgba(255, 182, 193, 0.2);
+}
+
+body.dark .c-item p {
+    color: var(--bg-color);
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90vh;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll(".c-item img");
+    const modal = document.getElementById("imageModal");
+    const enlargedImg = document.getElementById("enlargedImg");
+
+    // Open modal on image click
+    images.forEach(img => {
+        img.addEventListener("click", function () {
+            enlargedImg.src = this.getAttribute("data-large"); // Use data-large for source
+            modal.style.display = "flex"; // Show modal
+        });
+    });
+
+    // Close modal on click anywhere
+    modal.addEventListener("click", function () {
+        modal.style.display = "none"; // Hide modal
+    });
+});
+</script>
