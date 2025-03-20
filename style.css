@@ -149,7 +149,10 @@ nav a {
     background: var(--primary-color);
     border: 2px solid var(--text-color);
 }
-#hero .btn button:first-child a
+#hero .btn button:first-child a{
+    color: var(--text-color);
+    text-decoration: none;
+}
 
 #hero .btn button:first-child:hover {
     background: var(--accent-color);
@@ -572,13 +575,12 @@ body.dark .view-more-btn:hover {
 /* Contact Section */
 #contact {
     background: var(--bg-color);
-    padding: 3rem 2rem;
-    border-radius: 10px;
+    padding-top: 1rem;
     animation: slideIn 1.5s ease-out;
+    margin: 1rem 0 0;
 }
 
 #contact .container {
-    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -600,6 +602,7 @@ body.dark .view-more-btn:hover {
 .contact-left {
     flex-basis: 35%;
     min-width: 300px;
+    margin-left: 2rem;
 }
 
 .contact-right {
@@ -675,7 +678,7 @@ body.dark .view-more-btn:hover {
 
 form input,
 form textarea {
-    width: 100%;
+    width: 90%;
     border: 1px solid var(--accent-color);
     outline: none;
     background: var(--bg-color);
