@@ -2,7 +2,6 @@ const navbar = document.getElementById("navbar");
 let inactivityTimeout;
 let lastScrollPosition = 0;
 let isScrolling = false;
-
 // Function to hide the navbar
 const hideNavbar = () => {
     // Only hide the navbar if it is not in its original position
@@ -10,64 +9,50 @@ const hideNavbar = () => {
         navbar.classList.add("hidden");
     }
 };
-
 // Function to show the navbar
 const showNavbar = () => {
     navbar.classList.remove("hidden");
 };
-
 // Check if the navbar is in its original position
 const isInOriginalPosition = () => {
     return window.scrollY === 0;
 };
-
 // Event listener for scroll events
 window.addEventListener("scroll", () => {
     // Show the navbar on scroll
     showNavbar();
-
     // Detect if scrolling is happening
     if (!isScrolling) {
         isScrolling = true;
     }
-
     // Clear the inactivity timeout
     clearTimeout(inactivityTimeout);
-
     // Set a new timeout to hide the navbar after 2 seconds of inactivity
     inactivityTimeout = setTimeout(() => {
         if (!isScrolling) {
             hideNavbar();
         }
     }, 700);
-
     // Update scroll position to determine scroll direction
     lastScrollPosition = window.scrollY;
-
     // Reset scrolling state after a delay
     setTimeout(() => {
         isScrolling = false;
     }, 100);
 });
-
 // Event listener for mouse movement or key presses
 document.addEventListener("mousemove", () => {
     showNavbar();
     clearTimeout(inactivityTimeout);
     inactivityTimeout = setTimeout(hideNavbar, 2000);
 });
-
 document.addEventListener("keydown", () => {
     showNavbar();
     clearTimeout(inactivityTimeout);
     inactivityTimeout = setTimeout(hideNavbar, 2000);
 });
-
 // Initial inactivity timeout
 inactivityTimeout = setTimeout(hideNavbar, 2000);
-
-
-
 
 
 
@@ -89,6 +74,7 @@ updateDarkMode(savedMode === 'true' || (savedMode === null && prefersDark));
 toggleDark.addEventListener('click', () => updateDarkMode(!document.body.classList.contains('dark')));
 
 
+
 //about section slide in
 document.addEventListener("DOMContentLoaded", function () {
     const aboutSection = document.getElementById("about");
@@ -104,12 +90,12 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
 // certificate modal
 document.addEventListener("DOMContentLoaded", function () {
     const images = document.querySelectorAll(".c-item img");
     const modal = document.getElementById("imageModal");
     const enlargedImg = document.getElementById("enlargedImg");
-
     // Open modal on image click
     images.forEach(img => {
         img.addEventListener("click", function () {
@@ -117,7 +103,6 @@ document.addEventListener("DOMContentLoaded", function () {
             modal.style.display = "flex"; // Show modal
         });
     });
-
     // Close modal on click anywhere
     modal.addEventListener("click", function () {
         modal.style.display = "none"; // Hide modal
@@ -134,25 +119,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const filterBtns = document.querySelectorAll(".filter-btn");
     const viewMoreBtn = document.getElementById("viewMoreBtn");
     let isExpanded = false;
-    const initialVisibleCount = 3;
-
-    // Debugging: Check if viewMoreBtn exists
-    // if (!viewMoreBtn) {
-    //     console.error("View More button not found in the DOM!");
-    //     return;
-    // }
-
+    const initialVisibleCount = 3;    
     // Initialize all projects as visible by default
     projectItems.forEach(project => project.classList.add("visible"));
-
     // Function to update project visibility
     const updateProjectVisibility = () => {
         let visibleCount = 0;
         const totalVisibleProjects = Array.from(projectItems).filter(project => project.classList.contains("visible")).length;
-
-        // Debugging: Log current state
-        // console.log(`Total visible projects: ${totalVisibleProjects}, Expanded: ${isExpanded}`);
-
         projectItems.forEach(project => {
             const isVisible = project.classList.contains("visible");
             const withinLimit = isExpanded || visibleCount < initialVisibleCount;
@@ -164,67 +137,52 @@ document.addEventListener("DOMContentLoaded", () => {
                 project.classList.add("hidden");
             }
         });
-
         // Update button text and visibility
         viewMoreBtn.textContent = isExpanded ? "View Less" : "View More";
         viewMoreBtn.style.display = totalVisibleProjects > initialVisibleCount ? "inline-block" : "none";
-
-        // Debugging: Log visible count and button state
-        // console.log(`Visible count: ${visibleCount}, Button display: ${viewMoreBtn.style.display}`);
     };
-
     // Initially hide projects beyond the first 3
     projectItems.forEach((project, index) => {
         if (index >= initialVisibleCount) {
             project.classList.add("hidden");
         }
     });
-
     // Toggle View More/View Less
     viewMoreBtn.addEventListener("click", () => {
         console.log("View More button clicked!");
         isExpanded = !isExpanded;
         updateProjectVisibility();
     });
-
     // Toggle filter buttons visibility
     toggleFilter.addEventListener("click", () => {
         filterButtons.classList.toggle("hidden");
     });
-
     // Filtering functionality
     filterBtns.forEach(button => {
         button.addEventListener("click", () => {
             filterBtns.forEach(btn => btn.classList.remove("active"));
             button.classList.add("active");
-
             const filterCategory = button.dataset.filter;
             projectItems.forEach(project => {
                 const matchesFilter = filterCategory === "all" || project.dataset.category === filterCategory;
                 project.classList.toggle("visible", matchesFilter);
                 // Don't toggle hidden here, let updateProjectVisibility handle it
             });
-
             updateProjectVisibility();
         });
     });
-
     // Search functionality
     searchInput.addEventListener("input", (e) => {
         const searchText = e.target.value.toLowerCase();
-
         projectItems.forEach(project => {
             const projectName = project.dataset.name.toLowerCase();
             const projectCategory = project.dataset.category.toLowerCase();
             const matchesSearch = projectName.includes(searchText) || projectCategory.includes(searchText);
-
             project.classList.toggle("visible", matchesSearch);
             // Don't toggle hidden here, let updateProjectVisibility handle it
         });
-
         updateProjectVisibility();
     });
-
     // Initial visibility update
     updateProjectVisibility();
 });
