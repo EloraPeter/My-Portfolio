@@ -600,13 +600,13 @@ body.dark .view-more-btn:hover {
 }
 
 .contact-left {
-    flex-basis: 35%;
+    flex-basis: 40%;
     min-width: 300px;
-    margin-left: 2rem;
+    margin-left: 3rem;
 }
 
 .contact-right {
-    flex-basis: 60%;
+    flex-basis: 55%;
     min-width: 300px;
 }
 
