@@ -727,6 +727,11 @@ form .btn2 {
     color: var(--primary-color);
 }
 
+#designer{
+    font-size: 11px;
+    
+}
+
 @keyframes slideIn {
     from {
         transform: translateY(20px);
