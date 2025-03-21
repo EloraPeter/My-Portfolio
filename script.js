@@ -1,3 +1,4 @@
+//
 document.addEventListener("DOMContentLoaded", () => {
     const navbar = document.getElementById("navbar");
     let inactivityTimeout;
