@@ -103,7 +103,15 @@ nav a:hover {
     transition: transform 0.3s ease;
 }
 
-.hamburger.active i::before {
+.hamburger i {
+    transition: transform 0.3s ease;
+}
+
+.hamburger.active i {
+    transform: rotate(90deg);
+}
+
+.hamburger.active i.fa-bars::before {
     content: "\f00d"; /* Font Awesome "X" icon */
 }
 

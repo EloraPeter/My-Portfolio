@@ -1,4 +1,4 @@
-//
+//nav bar dunctionalities
 document.addEventListener("DOMContentLoaded", () => {
     const navbar = document.getElementById("navbar");
     let inactivityTimeout;
@@ -60,6 +60,40 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initial setup
     updateNavbarTransparency();
     inactivityTimeout = setTimeout(hideNavbar, 2000);
+});
+
+
+
+//side navbar
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("navMenu");
+
+    // Ensure initial state on load
+    navMenu.classList.remove("active");
+    hamburger.classList.remove("active");
+
+    // Toggle menu on hamburger click
+    hamburger.addEventListener("click", () => {
+        const isActive = navMenu.classList.toggle("active");
+        hamburger.classList.toggle("active", isActive);
+    });
+
+    // Close menu when clicking a link
+    navMenu.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            navMenu.classList.remove("active");
+            hamburger.classList.remove("active");
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", (e) => {
+        if (!navMenu.contains(e.target) && !hamburger.contains(e.target) && navMenu.classList.contains("active")) {
+            navMenu.classList.remove("active");
+            hamburger.classList.remove("active");
+        }
+    });
 });
 
 
