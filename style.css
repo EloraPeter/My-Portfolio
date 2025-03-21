@@ -26,7 +26,7 @@ body.dark {
     --primary-color: #D98695;
     --accent-color: #555;
     --text-color: #eee;
-    --background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5)), url(images/hero.webp); 
+    --background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5)), url(images/hero.webp);
 
 }
 
@@ -91,7 +91,7 @@ nav a {
     transition: background 0.3s;
 }
 
-.dark-mode-toggle i{
+.dark-mode-toggle i {
     color: var(--text-color);
 }
 
@@ -118,28 +118,34 @@ nav a {
     }
 }
 
-#hero .hero-container{
+#hero .hero-container {
     margin: 15% 0 0 40%;
-    transform: translateX(100%);/* Initial position: off-screen to the right */
-    opacity: 0; /* Optional: start invisible for a smoother effect */
-    animation: flyIn 1.5s ease-out forwards; /* Animation name, duration, timing, and fill mode */
+    transform: translateX(100%);
+    /* Initial position: off-screen to the right */
+    opacity: 0;
+    /* Optional: start invisible for a smoother effect */
+    animation: flyIn 1.5s ease-out forwards;
+    /* Animation name, duration, timing, and fill mode */
     overflow: hidden;
 }
 
 @keyframes flyIn {
     0% {
-        transform: translateX(100%); /* Start off-screen to the right */
+        transform: translateX(100%);
+        /* Start off-screen to the right */
         opacity: 0;
     }
+
     100% {
-        transform: translateX(0); /* End at its natural position */
+        transform: translateX(0);
+        /* End at its natural position */
         opacity: 1;
     }
 }
 
 #hero h2 {
     font-size: 2.7rem;
-    margin-bottom: 0.8rem; 
+    margin-bottom: 0.8rem;
 }
 
 #hero p {
@@ -163,7 +169,8 @@ nav a {
     background: var(--primary-color);
     border: 2px solid var(--text-color);
 }
-#hero .btn button:first-child a{
+
+#hero .btn button:first-child a {
     color: var(--text-color);
     text-decoration: none;
 }
@@ -191,13 +198,13 @@ nav a {
     margin: 20px 0 0 0;
 }
 
-#hero .social .social-links{
+#hero .social .social-links {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-.social-links a{
+.social-links a {
     font-size: 20px;
     border-radius: 50%;
     color: var(--text-color);
@@ -210,21 +217,27 @@ nav a {
     border: 1px solid #3b3b3b;
     transition: 0.4s ease;
 }
-.social-links a:hover{
+
+.social-links a:hover {
     transform: translateY(-8px);
 }
 
 /* About Section */
 #about {
     padding: 2rem;
-    transform: translateY(40px); /* Start position */
-    opacity: 0; /* Start hidden */
-    transition: transform 1.5s ease-out, opacity 1.5s ease-out; /* Smooth flow */
+    transform: translateY(40px);
+    /* Start position */
+    opacity: 0;
+    /* Start hidden */
+    transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+    /* Smooth flow */
 }
 
 #about.visible {
-    transform: translateY(0); /* End position */
-    opacity: 1; /* End visible */
+    transform: translateY(0);
+    /* End position */
+    opacity: 1;
+    /* End visible */
 }
 
 #about h2 {
@@ -265,8 +278,9 @@ nav a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     overflow: hidden;
-    cursor: pointer; 
-    height: 500px; /* Set a fixed height */
+    cursor: pointer;
+    height: 500px;
+    /* Set a fixed height */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -308,15 +322,16 @@ body.dark .c-item {
 body.dark .c-item p {
     color: var(--bg-color);
 }
+
 /* Modal Styles */
 .modal {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    background: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -329,9 +344,17 @@ body.dark .c-item p {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
     animation: fadeInM 0.3s ease-out;
 }
+
 @keyframes fadeInM {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 
@@ -361,7 +384,8 @@ body.dark .c-item p {
     gap: 15px;
     position: relative;
     width: 100%;
-    max-width: 500px; /* Limit width for better layout */
+    max-width: 500px;
+    /* Limit width for better layout */
 }
 
 .filter-header i {
@@ -391,11 +415,14 @@ body.dark .c-item p {
     border-radius: 25px;
     outline: none;
     font-size: 1rem;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */}
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    /* Added box-shadow transition */
+}
 
 #searchInput:focus {
     border-color: var(--primary-color);
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Added subtle shadow on focus */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    /* Added subtle shadow on focus */
 }
 
 #search-btn {
@@ -404,10 +431,10 @@ body.dark .c-item p {
     top: 50%;
     transform: translateY(-50%);
     color: var(--accent-color);
-    
+
 }
 
-#searchInput:focus + #search-btn {
+#searchInput:focus+#search-btn {
     color: var(--primary-color, #333);
 }
 
@@ -431,7 +458,8 @@ body.dark .c-item p {
     background: var(--accent-color, #f0f0f0);
     font-weight: 600;
     font-size: 0.9rem;
-    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Added transform transition */
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    /* Added transform transition */
 }
 
 .filter-btn:hover,
@@ -441,15 +469,18 @@ body.dark .c-item p {
 }
 
 .filter-btn:hover {
-    transform: scale(1.05); /* Added scale on hover */
+    transform: scale(1.05);
+    /* Added scale on hover */
 }
 
 .filter-btn.active {
-    transform: scale(1.1); /* Added scale for active state */
+    transform: scale(1.1);
+    /* Added scale for active state */
 }
 
 .filter-btn:active {
-    transform: scale(0.95); /* Added press effect on click */
+    transform: scale(0.95);
+    /* Added press effect on click */
 }
 
 /* Project Grid */
@@ -465,15 +496,20 @@ body.dark .c-item p {
     padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: block; /* Default state */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease, height 0.5s ease; /* Added opacity and height transitions */
-    height: auto; /* Default height for animation */
-    overflow: hidden; /* Prevent content spillover during animation */
+    display: block;
+    /* Default state */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease, height 0.5s ease;
+    /* Added opacity and height transitions */
+    height: auto;
+    /* Default height for animation */
+    overflow: hidden;
+    /* Prevent content spillover during animation */
 }
 
 .project-item.hidden {
-    display: none;     
-    transform: translateY(20px); /* Slide down effect */
+    display: none;
+    transform: translateY(20px);
+    /* Slide down effect */
 }
 
 .project-item:hover {
@@ -558,24 +594,24 @@ body.dark .modal-content {
 /* View More Button */
 .view-more-container {
     text-align: center;
-    margin-top: 2rem;
 }
 
 .view-more-btn {
-    padding: 12px 24px;
+    padding: 10px 25px;
     border: none;
     border-radius: 25px;
     background: var(--primary-color);
     color: white;
     font-weight: 600;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Added transform and box-shadow transitions */}
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
 
 .view-more-btn:hover {
     background: var(--accent-color);
     color: var(--text-color);
-    transform: scale(1.05); /* Added scale on hover */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .view-more-btn:active {
@@ -743,7 +779,7 @@ form textarea {
 
 form input:focus,
 form textarea:focus {
-        border: 2px solid var(--primary-color);
+    border: 2px solid var(--primary-color);
 }
 
 form textarea {
@@ -777,7 +813,7 @@ form .btn2 {
     color: var(--primary-color);
 }
 
-#designer{
+#designer {
     font-size: 11px;
 
 }
@@ -787,6 +823,7 @@ form .btn2 {
         transform: translateY(20px);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
