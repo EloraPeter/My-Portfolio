@@ -519,24 +519,6 @@ body.dark .c-item p {
     color: var(--text-color);
 }
 
-.video-link {
-    display: inline-block;
-    background: var(--primary-color);
-    padding: 12px 24px;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.video-link:hover {
-    background: var(--accent-color);
-    color: var(--text-color);
-    transform: scale(1.05);
-}
-
 .modal {
     display: none;
     position: fixed;
