@@ -551,6 +551,10 @@ body.dark .c-item p {
     text-align: center;
 }
 
+body.dark .modal-content {
+    background: var(--bg-color);
+}
+
 /* View More Button */
 .view-more-container {
     text-align: center;

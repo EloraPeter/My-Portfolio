@@ -111,6 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+//filter and search functionality
 document.addEventListener("DOMContentLoaded", () => {
     const toggleFilter = document.getElementById("toggleFilter");
     const filterButtons = document.getElementById("filterButtons");
@@ -185,4 +186,29 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     // Initial visibility update
     updateProjectVisibility();
+});
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const videoLink = document.querySelector(".video-link");
+    const modal = document.getElementById("videoModal");
+    const video = modal.querySelector("video source");
+    const downloadLink = modal.querySelector(".video-download");
+
+    videoLink.addEventListener("click", (e) => {
+        e.preventDefault(); // Prevent default link behavior
+        const videoPath = videoLink.getAttribute("data-video");
+        video.setAttribute("src", videoPath);
+        downloadLink.setAttribute("href", videoPath);
+        downloadLink.setAttribute("download", "My_Video.mp4"); // Optional custom filename
+        modal.style.display = "flex";
+        modal.querySelector("video").load(); // Reload video with new source
+    });
+
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
 });
