@@ -1178,6 +1178,11 @@ form .btn2 {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
+    .c-item{
+        width: 90%;
+  padding: 0 20px;
+    }
+
     .projects-grid {
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     }
