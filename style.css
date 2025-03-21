@@ -2,6 +2,7 @@
 :root {
     --bg-color: #F5F5DC;
     /* Beige */
+    --primary-color-rgb: 255, 182, 193; /* #ffb6c1 in RGB */
     --primary-color: #ffb6c1;
     /* Baby Pink */
     --accent-color: #D3D3D3;
@@ -24,6 +25,7 @@
 body.dark {
     --bg-color: #333;
     --primary-color: #D98695;
+    --primary-color-rgb: 217, 134, 149; /* #D98695 in RGB */
     --accent-color: #555;
     --text-color: #eee;
     --background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5)), url(images/hero.webp);
@@ -52,16 +54,19 @@ header {
     align-items: center;
     padding: 1rem;
     background: var(--primary-color);
-
     position: sticky;
     top: 0;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, background 0.3s ease; /* Added background transition */    
     transform: translateY(0);
     z-index: 100;
 }
 
 header.hidden {
     transform: translateY(-100%);
+}
+
+header.scrolled {
+    background: rgba(var(--primary-color-rgb), 0.5); /* Semi-transparent when scrolled */
 }
 
 header h1 {
