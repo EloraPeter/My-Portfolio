@@ -871,21 +871,6 @@ form .btn2 {
 }
 
 /* Responsive Design */
-/* @media (min-width: 768px) {
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 1024px) {
-    .projects-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    header {
-        padding: 1rem 2rem;
-    }
-} */
 
 /* Extra Small Devices (very small phones, ≤320px) */
 @media only screen and (max-width: 320px) {
@@ -1190,11 +1175,11 @@ form .btn2 {
     }
 
     .certificate-container {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
     .projects-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     }
 
     .contact-left,
