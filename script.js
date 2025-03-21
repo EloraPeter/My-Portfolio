@@ -1,86 +1,22 @@
-
-// const navbar = document.getElementById("navbar");
-// let inactivityTimeout;
-// let lastScrollPosition = 0;
-// let isScrolling = false;
-// // Function to hide the navbar
-// const hideNavbar = () => {
-//     // Only hide the navbar if it is not in its original position
-//     if (!isInOriginalPosition()) {
-//         navbar.classList.add("hidden");
-//     }
-// };
-// // Function to show the navbar
-// const showNavbar = () => {
-//     navbar.classList.remove("hidden");
-// };
-// // Check if the navbar is in its original position
-// const isInOriginalPosition = () => {
-//     return window.scrollY === 0;
-// };
-// // Event listener for scroll events
-// window.addEventListener("scroll", () => {
-//     // Show the navbar on scroll
-//     showNavbar();
-//     // Detect if scrolling is happening
-//     if (!isScrolling) {
-//         isScrolling = true;
-//     }
-//     // Clear the inactivity timeout
-//     clearTimeout(inactivityTimeout);
-//     // Set a new timeout to hide the navbar after 2 seconds of inactivity
-//     inactivityTimeout = setTimeout(() => {
-//         if (!isScrolling) {
-//             hideNavbar();
-//         }
-//     }, 700);
-//     // Update scroll position to determine scroll direction
-//     lastScrollPosition = window.scrollY;
-//     // Reset scrolling state after a delay
-//     setTimeout(() => {
-//         isScrolling = false;
-//     }, 100);
-// });
-// // Event listener for mouse movement or key presses
-// document.addEventListener("mousemove", () => {
-//     showNavbar();
-//     clearTimeout(inactivityTimeout);
-//     inactivityTimeout = setTimeout(hideNavbar, 2000);
-// });
-// document.addEventListener("keydown", () => {
-//     showNavbar();
-//     clearTimeout(inactivityTimeout);
-//     inactivityTimeout = setTimeout(hideNavbar, 2000);
-// });
-// // Initial inactivity timeout
-// inactivityTimeout = setTimeout(hideNavbar, 2000);
-
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
     const navbar = document.getElementById("navbar");
     let inactivityTimeout;
     let lastScrollPosition = 0;
     let isScrolling = false;
-
     // Function to hide the navbar
     const hideNavbar = () => {
         if (!isInOriginalPosition()) {
             navbar.classList.add("hidden");
         }
     };
-
     // Function to show the navbar
     const showNavbar = () => {
         navbar.classList.remove("hidden");
     };
-
     // Check if the navbar is in its original position
     const isInOriginalPosition = () => {
         return window.scrollY === 0;
     };
-
     // Update navbar transparency based on scroll position
     const updateNavbarTransparency = () => {
         if (isInOriginalPosition()) {
@@ -89,30 +25,24 @@ document.addEventListener("DOMContentLoaded", () => {
             navbar.classList.add("scrolled"); // Semi-transparent when scrolled
         }
     };
-
     // Event listener for scroll events
     window.addEventListener("scroll", () => {
         showNavbar();
         updateNavbarTransparency(); // Update transparency on scroll
-
         if (!isScrolling) {
             isScrolling = true;
         }
-
         clearTimeout(inactivityTimeout);
         inactivityTimeout = setTimeout(() => {
             if (!isScrolling) {
                 hideNavbar();
             }
         }, 700);
-
         lastScrollPosition = window.scrollY;
-
         setTimeout(() => {
             isScrolling = false;
         }, 100);
     });
-
     // Event listener for mouse movement or key presses
     document.addEventListener("mousemove", () => {
         showNavbar();
@@ -120,18 +50,17 @@ document.addEventListener("DOMContentLoaded", () => {
         clearTimeout(inactivityTimeout);
         inactivityTimeout = setTimeout(hideNavbar, 2000);
     });
-
     document.addEventListener("keydown", () => {
         showNavbar();
         updateNavbarTransparency(); // Ensure transparency updates
         clearTimeout(inactivityTimeout);
         inactivityTimeout = setTimeout(hideNavbar, 2000);
     });
-
     // Initial setup
     updateNavbarTransparency();
     inactivityTimeout = setTimeout(hideNavbar, 2000);
 });
+
 
 
 // Dark mode toggle functionality
@@ -273,7 +202,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById("videoModal");
     const video = modal.querySelector("video source");
     const downloadLink = modal.querySelector(".video-download");
-
     videoLink.addEventListener("click", (e) => {
         e.preventDefault(); // Prevent default link behavior
         const videoPath = videoLink.getAttribute("data-video");
@@ -283,7 +211,6 @@ document.addEventListener("DOMContentLoaded", () => {
         modal.style.display = "flex";
         modal.querySelector("video").load(); // Reload video with new source
     });
-
     modal.addEventListener("click", (e) => {
         if (e.target === modal) {
             modal.style.display = "none";

@@ -35,7 +35,6 @@ body.dark {
 * {
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
 }
 
 body {
@@ -56,7 +55,7 @@ header {
     background: var(--primary-color);
     position: sticky;
     top: 0;
-    transition: transform 0.3s ease-in-out, background 0.3s ease; /* Added background transition */    
+    transition: transform 0.3s ease-in-out, background 0.3s ease; 
     transform: translateY(0);
     z-index: 100;
 }
@@ -66,7 +65,7 @@ header.hidden {
 }
 
 header.scrolled {
-    background: rgba(var(--primary-color-rgb), 0.5); /* Semi-transparent when scrolled */
+    background: rgba(var(--primary-color-rgb), 0.5); 
 }
 
 header h1 {
@@ -126,24 +125,19 @@ nav a {
 #hero .hero-container {
     margin: 15% 0 0 40%;
     transform: translateX(100%);
-    /* Initial position: off-screen to the right */
     opacity: 0;
-    /* Optional: start invisible for a smoother effect */
     animation: flyIn 1.5s ease-out forwards;
-    /* Animation name, duration, timing, and fill mode */
     overflow: hidden;
 }
 
 @keyframes flyIn {
     0% {
         transform: translateX(100%);
-        /* Start off-screen to the right */
         opacity: 0;
     }
 
     100% {
         transform: translateX(0);
-        /* End at its natural position */
         opacity: 1;
     }
 }
@@ -231,18 +225,13 @@ nav a {
 #about {
     padding: 2rem;
     transform: translateY(40px);
-    /* Start position */
     opacity: 0;
-    /* Start hidden */
     transition: transform 1.5s ease-out, opacity 1.5s ease-out;
-    /* Smooth flow */
 }
 
 #about.visible {
     transform: translateY(0);
-    /* End position */
     opacity: 1;
-    /* End visible */
 }
 
 #about h2 {
@@ -263,7 +252,6 @@ nav a {
 
 .certificates h2 {
     font-size: 2.5rem;
-    /* color: var(--text-color); */
     margin-bottom: 1.5rem;
     font-weight: bold;
 }
@@ -285,7 +273,6 @@ nav a {
     overflow: hidden;
     cursor: pointer;
     height: 500px;
-    /* Set a fixed height */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -310,7 +297,6 @@ nav a {
     color: var(--text-color);
     font-size: 0.9rem;
     margin-top: 0.8rem;
-    /* font-weight: 500; */
 }
 
 .c-item:hover {
@@ -390,7 +376,6 @@ body.dark .c-item p {
     position: relative;
     width: 100%;
     max-width: 500px;
-    /* Limit width for better layout */
 }
 
 .filter-header i {
@@ -421,13 +406,11 @@ body.dark .c-item p {
     outline: none;
     font-size: 1rem;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    /* Added box-shadow transition */
 }
 
 #searchInput:focus {
     border-color: var(--primary-color);
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    /* Added subtle shadow on focus */
 }
 
 #search-btn {
@@ -464,7 +447,6 @@ body.dark .c-item p {
     font-weight: 600;
     font-size: 0.9rem;
     transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
-    /* Added transform transition */
 }
 
 .filter-btn:hover,
@@ -475,17 +457,14 @@ body.dark .c-item p {
 
 .filter-btn:hover {
     transform: scale(1.05);
-    /* Added scale on hover */
 }
 
 .filter-btn.active {
     transform: scale(1.1);
-    /* Added scale for active state */
 }
 
 .filter-btn:active {
     transform: scale(0.95);
-    /* Added press effect on click */
 }
 
 /* Project Grid */
@@ -502,19 +481,14 @@ body.dark .c-item p {
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: block;
-    /* Default state */
     transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease, height 0.5s ease;
-    /* Added opacity and height transitions */
     height: auto;
-    /* Default height for animation */
     overflow: hidden;
-    /* Prevent content spillover during animation */
 }
 
 .project-item.hidden {
     display: none;
     transform: translateY(20px);
-    /* Slide down effect */
 }
 
 .project-item:hover {
@@ -770,7 +744,6 @@ body.dark .view-more-btn:hover {
 form input,
 form textarea {
     width: 90%;
-    /* border: 1px solid var(--accent-color); */
     border: none;
     outline: none;
     background: var(--accent-color);
@@ -789,7 +762,6 @@ form textarea:focus {
 
 form textarea {
     resize: vertical;
-    /* min-height: 100px; */
 }
 
 form .btn2 {
