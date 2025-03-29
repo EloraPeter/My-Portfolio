@@ -1,4 +1,4 @@
-//nav bar dunctionalities
+//nav bar functionalities
 document.addEventListener("DOMContentLoaded", () => {
     const navbar = document.getElementById("navbar");
     let inactivityTimeout;
@@ -104,7 +104,7 @@ const toggleDark = document.getElementById('toggleDark');
 function updateDarkMode(isDark) {
     document.body.classList.toggle('dark', isDark);
     toggleDark.innerHTML = isDark
-        ? '<i class="fa-solid fa-lightbulb"></i>'
+        ? '<i class="fa-solid fa-sun"></i>'
         : '<i class="fa-solid fa-moon"></i>';
     localStorage.setItem('darkMode', isDark);
 }
