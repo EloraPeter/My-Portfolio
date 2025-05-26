@@ -208,7 +208,7 @@ nav a:hover {
 }
 
 #hero .hero-container {
-    margin: 10% auto 40%;
+    margin: 10% 0 40%  40%;
     transform: translateX(100%);
     opacity: 0;
     animation: flyIn 1.5s ease-out forwards;
@@ -990,3 +990,179 @@ body.dark #backToTop {
 
 /* Responsive Design */
 
+/* Media Query for 750px and below */
+@media (max-width: 750px) {
+    header { padding: 1rem; flex-wrap: wrap; gap: 0.5rem; }
+    header h1 { font-size: 1.5rem; }
+    .hamburger { display: block; }
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        background: rgba(var(--primary-color-rgb), 0.1);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    }
+    nav.active { transform: translateX(0); }
+    nav a { margin: 1.2rem 0; font-size: 1.2rem; }
+    .dark-mode-toggle { margin: 1.2rem 0; }
+    #hero { padding: 3rem 1rem; height: auto; background-attachment: scroll; }
+    #hero .hero-container { margin: 8% 5%; text-align: center; }
+    #hero h2 { font-size: 2rem; }
+    #hero p { font-size: 1.1rem; }
+    #hero .btn { flex-direction: column; gap: 0.75rem; }
+    #hero .btn button { width: 100%; }
+    .social-links { justify-content: center; }
+    #about { padding: 2.5rem 1rem; }
+    #about h2 { font-size: 2rem; }
+    .certificates { padding: 2rem 1rem; }
+    .certificates h2 { font-size: 2rem; }
+    .certificate-container { grid-template-columns: 1fr; }
+    .c-item { min-height: 400px; }
+    #skills { padding: 3rem 1rem; }
+    #skills h2 { font-size: 2rem; }
+    .skills-grid { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+    #projects { padding: 3rem 1rem; }
+    #projects h2 { font-size: 2rem; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .filter-header { flex-direction: column; gap: 0.5rem; }
+    #testimonials { padding: 3rem 1rem; }
+    #testimonials h2 { font-size: 2rem; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    #contact { padding: 2.5rem 1rem; }
+    #contact .sub-title { font-size: 2.5rem; }
+    .contact-left, .contact-right { flex-basis: 100%; margin-left: 0; text-align: center; }
+    .contact-left .social-icons { justify-content: center; }
+    form .btn2 { align-self: center; }
+}
+
+/* Extra Small Devices (≤320px) */
+@media only screen and (max-width: 320px) {
+    body { font-size: 14px; line-height: 1.6; }
+    header { padding: 0.75rem; flex-direction: column; }
+    header h1 { font-size: 1.25rem; }
+    nav a { font-size: 1rem; margin: 0.8rem 0; }
+    .dark-mode-toggle { padding: 0.5rem 0.75rem; font-size: 0.9rem; }
+    #hero { padding: 2rem 0.75rem; }
+    #hero .hero-container { margin: 5% 5%; animation: none; }
+    #hero h2 { font-size: 1.5rem; }
+    #hero p { font-size: 0.95rem; }
+    #hero .btn button { font-size: 0.9rem; padding: 0.5rem 1rem; }
+    .social-links a { width: 2rem; height: 2rem; font-size: 1rem; }
+    #about h2, .certificates h2, #projects h2, #skills h2, #testimonials h2, #contact .sub-title { font-size: 1.75rem; }
+    .c-item, .project-item, .skill-item, .testimonial-item { padding: 1rem; }
+    .c-item img, .project-img { height: 160px; }
+    .filter-btn { padding: 0.5rem 0.75rem; font-size: 0.85rem; }
+    .contact-left p { font-size: 1rem; }
+    .social-icons a { font-size: 1.5rem; margin-right: 0.5rem; }
+    form input, form textarea { font-size: 0.95rem; padding: 0.75rem; }
+    form .btn2 { padding: 0.5rem 1.5rem; }
+    .copyright { font-size: 0.85rem; }
+    #designer { font-size: 0.75rem; }
+}
+
+/* Small Devices (321px to 576px) */
+@media only screen and (min-width: 321px) and (max-width: 576px) {
+    body { font-size: 15px; }
+    header { padding: 1rem; }
+    header h1 { font-size: 1.5rem; }
+    #hero { padding: 2.5rem 1rem; min-height: 70vh; }
+    #hero .hero-container { margin: 6% 5%; }
+    #hero h2 { font-size: 1.75rem; }
+    #hero p { font-size: 1rem; }
+    #hero .btn button { font-size: 0.95rem; }
+    #about h2, .certificates h2, #projects h2, #skills h2, #testimonials h2, #contact .sub-title { font-size: 1.9rem; }
+    .certificate-container, .projects-grid, .skills-grid, .testimonials-grid { grid-template-columns: 1fr; }
+    .c-item { min-height: 420px; }
+    .contact-left, .contact-right { margin-left: 0; }
+}
+
+/* Medium Devices (577px to 768px) */
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    header { padding: 1rem 1.5rem; }
+    header h1 { font-size: 1.75rem; }
+    nav a { margin: 0 0.75rem; font-size: 1rem; }
+    #hero { padding: 3.5rem 1.5rem; min-height: 80vh; }
+    #hero .hero-container { margin: 8% auto; }
+    #hero h2 { font-size: 2.25rem; }
+    #hero p { font-size: 1.15rem; }
+    #about { padding: 3rem 1.5rem; }
+    .certificates { padding: 2.5rem 1.5rem; }
+    .certificate-container { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .skills-grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+    .projects-grid, .testimonials-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    #projects { padding: 3.5rem 1.5rem; }
+    #testimonials { padding: 3.5rem 1.5rem; }
+    #contact { padding: 3rem 1.5rem; }
+    #contact .sub-title { font-size: 2.75rem; }
+    .contact-left, .contact-right { flex-basis: 100%; }
+}
+
+/* Large Devices (769px to 1200px) */
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+    header { padding: 1.25rem 1.75rem; }
+    header h1 { font-size: 2rem; }
+    nav a { margin: 0 1rem; font-size: 1.05rem; }
+    #hero { padding: 4rem 2rem; }
+    #hero .hero-container { margin: 10% auto; }
+    #hero h2 { font-size: 2.5rem; }
+    #hero p { font-size: 1.2rem; }
+    #about { padding: 3.5rem 2rem; }
+    .certificates { padding: 3rem 2rem; }
+    .certificate-container, .skills-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .projects-grid, .testimonials-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    #projects { padding: 4rem 2rem; }
+    #testimonials { padding: 4rem 2rem; }
+    #contact { padding: 3.5rem 2rem; }
+    #contact .sub-title { font-size: 3rem; }
+    .contact-left { flex-basis: 45%; }
+    .contact-right { flex-basis: 50%; }
+}
+
+/* Extra Large Devices (1201px to 1920px) */
+@media only screen and (min-width: 1201px) and (max-width: 1920px) {
+    header { padding: 1.5rem 2rem; }
+    header h1 { font-size: 2.25rem; }
+    nav a { margin: 0 1.25rem; font-size: 1.1rem; }
+    #hero { padding: 4.5rem 2.5rem; }
+    #hero h2 { font-size: 2.75rem; }
+    #hero p { font-size: 1.25rem; }
+    #about { padding: 4rem 2.5rem; }
+    .certificates { padding: 3.5rem 2.5rem; }
+    .certificate-container, .skills-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .projects-grid, .testimonials-grid { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
+    #projects { padding: 4.5rem 2.5rem; }
+    #testimonials { padding: 4.5rem 2.5rem; }
+    #contact { padding: 4rem 2.5rem; }
+    #contact .sub-title { font-size: 3.25rem; }
+    .contact-left { flex-basis: 40%; }
+    .contact-right { flex-basis: 55%; }
+}
+
+/* Ultra Large Devices (> 1920px) */
+@media only screen and (min-width: 1921px) {
+    body { font-size: 18px; }
+    header { padding: 2rem 3rem; }
+    header h1 { font-size: 2.5rem; }
+    nav a { margin: 0 1.5rem; font-size: 1.25rem; }
+    #hero { padding: 5rem 3rem; }
+    #hero h2 { font-size: 3rem; }
+    #hero p { font-size: 1.4rem; }
+    #about { padding: 5rem 3rem; }
+    .certificates { padding: 4rem 3rem; }
+    .certificate-container, .skills-grid { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+    .projects-grid, .testimonials-grid { grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); }
+    .project-img { height: 300px; }
+    #projects { padding: 5rem 3rem; }
+    #testimonials { padding: 5rem 3rem; }
+    #contact { padding: 5rem 3rem; }
+    #contact .sub-title { font-size: 3.5rem; }
+    .contact-left { flex-basis: 35%; }
+    .contact-right { flex-basis: 60%; }
+}
