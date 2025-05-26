@@ -890,19 +890,30 @@ body.dark .testimonial-item {
     text-decoration: none;
     font-weight: 500;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    margin-right: 1rem;
 }
 
 .btn.btn2:hover {
-    background: var(--accent-color);
+    opacity: 0.9;
     transform: scale(1.05);
 }
 
+.btn.btn2:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+body.dark .btn.btn2 {
+    color: var(--text-color);
+}
+
 .contact-right form {
-    width: 100%;
-    display: flex;
+   display: flex;
     flex-direction: column;
     gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 form input,
