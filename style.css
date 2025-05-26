@@ -608,15 +608,16 @@ body.dark .skill-item {
 }
 
 .project-item {
-    background: var(--accent-color, #fff);
+   background: var(--bg-color);
     padding: 1.5rem;
-    border-radius: 12px;
+    border-radius: 10px;
+    border: 1px solid var(--accent-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: block;
     transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease,
         height 0.5s ease;
-    height: auto;
-    overflow: hidden;
+    /* height: auto;
+    overflow: hidden; */
 }
 
 .project-item.hidden {
@@ -627,11 +628,12 @@ body.dark .skill-item {
 .project-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0.95;
 }
 
 .project-img {
     width: 100%;
-    height: 300px;
+    height: 280px;
     object-fit: cover;
     border-radius: 5px;
     margin-bottom: 1rem;
@@ -639,6 +641,7 @@ body.dark .skill-item {
 
 .project-item h3 {
     font-size: 1.5rem;
+    font-weight: 500;
     color: var(--text-color);
     margin-bottom: 0.5rem;
 }
@@ -654,7 +657,7 @@ body.dark .skill-item {
     align-items: center;
     color: var(--primary-color);
     text-decoration: none;
-    font-weight: 900;
+    font-weight: 500;
     transition: color 0.3s ease;
 }
 
@@ -664,7 +667,7 @@ body.dark .skill-item {
 }
 
 .project-link:hover {
-    color: var(--text-color);
+    color: var(--accent-color);
 }
 
 .modal {
