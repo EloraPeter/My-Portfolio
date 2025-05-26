@@ -547,7 +547,7 @@ body.dark .skill-item {
 
 #searchInput:focus {
     border-color: var(--primary-color);
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+   box-shadow: 0 0 6px rgba(var(--primary-color-rgb), 0.2);
 }
 
 #search-btn {
@@ -559,7 +559,7 @@ body.dark .skill-item {
 }
 
 #searchInput:focus+#search-btn {
-    color: var(--primary-color, #333);
+    color: var(--primary-color);
 }
 
 .filter-buttons {
@@ -579,7 +579,7 @@ body.dark .skill-item {
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    background: var(--accent-color, #f0f0f0);
+    background: var(--accent-color);
     font-weight: 600;
     font-size: 0.9rem;
     transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
@@ -587,8 +587,8 @@ body.dark .skill-item {
 
 .filter-btn:hover,
 .filter-btn.active {
-    background: var(--primary-color, #333);
-    color: white;
+    background: var(--primary-color);
+    color: var(--bg-color);
 }
 
 .filter-btn:hover {
@@ -599,16 +599,12 @@ body.dark .skill-item {
     transform: scale(1.1);
 }
 
-.filter-btn:active {
-    transform: scale(0.95);
-}
-
 /* Project Grid */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
-    padding: 2rem;
+    /* padding: 2rem; */
 }
 
 .project-item {
