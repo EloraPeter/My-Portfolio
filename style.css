@@ -943,9 +943,9 @@ form textarea {
 
 form .btn2 {
     padding: 14px 60px;
-    margin-top: 20px;
+    margin: 20px 0 0;
     align-self: flex-start;
-    width: 100%;
+    width: 90%;
 }
 
 #msg {
@@ -960,9 +960,11 @@ form .btn2 {
     text-align: center;
     padding: 20px 0;
     background: rgba(0, 0, 0, var(--opacity4));
-    font-weight: 300;
+    font-weight: 400;
     margin-top: 20px;
     color: var(--text-color);
+    position: relative;
+    bottom: 0;
 }
 
 .copyright i {
@@ -971,6 +973,7 @@ form .btn2 {
 
 #designer {
     font-size: 11px;
+     opacity: 0.8;
 }
 
 @keyframes slideIn {
