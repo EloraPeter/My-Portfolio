@@ -804,9 +804,9 @@ body.dark .testimonial-item {
 /* Contact Section */
 #contact {
     background: var(--bg-color);
-    padding-top: 1rem;
+    padding-top: 3rem;
     animation: slideIn 1.5s ease-out;
-    margin: 1rem 0 0;
+   
 }
 
 #contact .container {
