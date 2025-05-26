@@ -457,7 +457,7 @@ body.dark .skill-item {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -467,7 +467,6 @@ body.dark .skill-item {
     max-width: 90%;
     max-height: 90vh;
     border-radius: 8px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
     animation: fadeInM 0.3s ease-out;
 }
 
@@ -481,6 +480,15 @@ body.dark .skill-item {
         opacity: 1;
         transform: scale(1);
     }
+}
+
+.modal-content video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+body.dark .modal-content {
+    background: var(--bg-color);
 }
 
 /* Projects Section */
