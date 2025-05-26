@@ -247,7 +247,7 @@ nav a:hover {
     border: none;
     outline: none;
     cursor: pointer;
-     transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
     margin: 15px 0px;
 }
 
@@ -301,7 +301,8 @@ nav a:hover {
     height: 40px;
     background: var(--primary-color);
     border: 1px solid #3b3b3b;
-transition: transform 0.3s ease, opacity 0.3s ease;}
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
 
 .social-links a:hover {
     transform: translateY(-8px);
@@ -555,7 +556,7 @@ body.dark .modal-content {
 
 #searchInput:focus {
     border-color: var(--primary-color);
-   box-shadow: 0 0 6px rgba(var(--primary-color-rgb), 0.2);
+    box-shadow: 0 0 6px rgba(var(--primary-color-rgb), 0.2);
 }
 
 #search-btn {
@@ -616,14 +617,14 @@ body.dark .modal-content {
 }
 
 .project-item {
-   background: var(--bg-color);
+    background: var(--bg-color);
     padding: 1.5rem;
     border-radius: 10px;
     border: 1px solid var(--accent-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     /* display: block; */
     transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
-       
+
     /* height: auto;
     overflow: hidden; */
 }
@@ -695,48 +696,6 @@ body.dark .project-link {
 body.dark .project-link:hover {
     color: var(--accent-color);
 }
-
-
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.modal-content {
-    max-width: 90%;
-    max-height: 90vh;
-    background: var(--bg-color);
-    padding: 1rem;
-    border-radius: 8px;
-    position: relative;
-}
-
-.modal-content video {
-    width: 100%;
-    border-radius: 8px;
-}
-
-.video-download {
-    display: block;
-    text-align: center;
-}
-
-body.dark .modal-content {
-    background: var(--bg-color);
-}
-
-/* View More Button */
-/* .view-more-container {
-    text-align: center;
-} */
 
 .view-more-btn {
     padding: 10px 25px;
@@ -814,7 +773,7 @@ body.dark .testimonial-item {
     background: var(--bg-color);
     padding-top: 3rem;
     animation: slideIn 1.5s ease-out;
-   
+
 }
 
 /* #contact .container {
@@ -917,7 +876,7 @@ body.dark .btn.btn2 {
 }
 
 .contact-right form {
-   display: flex;
+    display: flex;
     flex-direction: column;
     gap: 1rem;
     max-width: 600px;
@@ -981,7 +940,7 @@ form .btn2 {
 
 #designer {
     font-size: 11px;
-     opacity: 0.8;
+    opacity: 0.8;
 }
 
 @keyframes slideIn {
@@ -994,6 +953,39 @@ form .btn2 {
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+/* Back to Top Button */
+#backToTop {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--primary-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+#backToTop.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+#backToTop:hover {
+    transform: scale(1.1);
+}
+
+body.dark #backToTop {
+    color: var(--text-color);
 }
 
 /* Responsive Design */
@@ -1076,9 +1068,9 @@ form .btn2 {
     }
 
     #hero .btn {
-        
+
         flex-direction: column;
-       
+
         gap: 0.5rem;
     }
 
@@ -1086,7 +1078,7 @@ form .btn2 {
         font-size: 14px;
         padding: 8px 20px;
         width: 100%;
-       
+
     }
 
     .social-links {
