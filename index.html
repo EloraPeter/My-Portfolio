@@ -11,19 +11,21 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-    <header id="navbar">
+    <header id="navbar" class="shadow-sm">
         <h1>Elora Inspire</h1>
         <button class="hamburger" id="hamburger">
             <i class="fa-solid fa-bars"></i>
         </button>
-        <nav id="navMenu">
+        <nav id="navMenu" class="hidden md:flex space-x-6 items-center">
             <a href="#hero">Home</a>
             <a href="#about">About</a>
+ <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <a href="#testimonials">Testimonials</a>            <a href="#contact">Contact</a>
             <button class="dark-mode-toggle" id="toggleDark">
                 <i class="fa-solid fa-moon"></i>
             </button>
