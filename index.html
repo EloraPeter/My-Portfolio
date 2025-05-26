@@ -306,7 +306,7 @@
             </div>
         </section>
 
-<!-- Testimonials Section -->
+        <!-- Testimonials Section -->
         <section id="testimonials" class="container">
             <h2>Testimonials</h2>
             <div class="testimonials-grid">
@@ -330,45 +330,43 @@
 
 
         <!-- Contact Section -->
-        <section id="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="contact-left">
-                        <h2 class="sub-title">Contact Me</h2>
-                        <p><i class="fa-solid fa-paper-plane"></i> <a
-                                href="mailto:florenceonyi09@gmail.com">florenceonyi09@gmail.com</a></p>
-                        <p><i class="fa-solid fa-square-phone"></i> +2348105769233</p>
-                        <div class="social-icons">
-                            <a href="https://www.facebook.com/florence.ofuokwu.71" target="_blank"><i
-                                    class="fa-brands fa-facebook"></i></a>
-                            <a href="https://codepen.io/EloraPeter" target="_blank"><i
-                                    class="fa-brands fa-codepen"></i></a>
-                            <a href="https://x.com/EloraPeter?t=csWjtGJeGUWVloDn60QCMg&s=09" target="_blank"><i
-                                    class="fa-brands fa-twitter-square"></i></a>
-                            <a href="http://www.youtube.com/@florenceofuokwu5679" target="_blank"><i
-                                    class="fa-brands fa-youtube"></i></a>
-                            <a href="https://www.linkedin.com/in/florence-ofuokwu-908129316/" target="_blank"><i
-                                    class="fa-brands fa-linkedin"></i></a>
-                            <a href="https://github.com/EloraPeter" target="_blank"><i
-                                    class="fa-brands fa-github"></i></a>
-                        </div>
-                        <a href="images/CV.pdf" download class="btn btn2">Download CV</a>
-                        <a href="https://github.com/EloraPeter?tab=repositories" target="_blank" class="btn btn2">View
-                            My GitHub</a>
+        <!-- Contact Section -->
+        <section id="contact" class="container">
+            <h2 class="sub-title">Get in Touch</h2>
+            <div class="row flex flex-wrap gap-8 justify-center">
+                <div class="contact-left max-w-md">
+                    <p><i class="fa-solid fa-paper-plane"></i><a
+                            href="mailto:florenceonyi09@gmail.com">florenceonyi09@gmail.com</a></p>
+                    <p><i class="fa-solid fa-square-phone"></i>+2348105769233</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/florence.ofuokwu.71" target="_blank" aria-label="Facebook"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a href="https://codepen.io/EloraPeter" target="_blank" aria-label="CodePen"><i
+                                class="fa-brands fa-codepen"></i></a>
+                        <a href="https://x.com/EloraPeter?t=csWjtGJeGUWVloDn60QCMg&s=09" target="_blank"
+                            aria-label="Twitter"><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href="http://www.youtube.com/@florenceofuokwu5679" target="_blank" aria-label="YouTube"><i
+                                class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/in/florence-ofuokwu-908129316/" target="_blank"
+                            aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/EloraPeter" target="_blank" aria-label="GitHub"><i
+                                class="fa-brands fa-github"></i></a>
                     </div>
-                    <div class="contact-right">
-                        <form id="contactForm" name="submit-to-google-sheet">
-                            <input type="text" name="Name" placeholder="Your Name" required />
-                            <input type="email" name="Email" placeholder="Your Email" required />
-                            <textarea name="Message" rows="1" placeholder="Your Message" required></textarea>
-                            <button type="submit" class="btn btn2">Send Message</button>
-                        </form>
-                        <span id="msg"></span>
-                    </div>
+                    <a href="images/CV.pdf" download class="btn btn2">Download CV</a>
+                    <a href="https://github.com/EloraPeter?tab=repositories" target="_blank" class="btn btn2">View
+                        GitHub</a>
                 </div>
-
+                <div class="contact-right">
+                    <form id="contactForm" name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required aria-label="Name" />
+                        <input type="email" name="Email" placeholder="Your Email" required aria-label="Email" />
+                        <textarea name="Message" rows="4" placeholder="Your Message" required
+                            aria-label="Message"></textarea>
+                        <button type="submit" class="btn btn2">Send Message</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
             </div>
-
         </section>
     </main>
 
@@ -376,6 +374,10 @@
         <p>Copyright © Elora Inspire 2025.</p>
         <p id="designer">Made with <i class="fa-regular fa-heart"></i> by Elora Peter</p>
     </div>
+
+     <button id="backToTop" aria-label="Back to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>
