@@ -509,16 +509,16 @@ body.dark .skill-item {
 .filter-header {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 1rem;
     position: relative;
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
 }
 
 .filter-header i {
     font-size: 25px;
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .filter-header #toggleFilter {
@@ -526,8 +526,8 @@ body.dark .skill-item {
 }
 
 .filter-header #toggleFilter:hover {
-    color: var(--primary-color, #333);
-    transform: scale(1.2);
+    color: var(--primary-color);
+    transform: scale(1.1);
 }
 
 .search-wrapper {
