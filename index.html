@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-        <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
@@ -23,10 +23,10 @@
         <nav id="navMenu" class="hidden md:flex space-x-6 items-center">
             <a href="#hero">Home</a>
             <a href="#about">About</a>
- <a href="#skills">Skills</a>
+            <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
-            <a href="#testimonials">Testimonials</a>            <a href="#contact">Contact</a>
-            <button class="dark-mode-toggle" id="toggleDark">
+            <a href="#testimonials">Testimonials</a> <a href="#contact">Contact</a>
+            <button class="dark-mode-toggle" id="toggleDark" aria-label="Toggle dark mode">
                 <i class="fa-solid fa-moon"></i>
             </button>
         </nav>
@@ -167,7 +167,7 @@
         <!-- Projects Section -->
         <section id="projects">
             <h2>Projects</h2>
-        
+
             <!-- Filter & Search Section -->
             <div class="filter-container">
                 <div class="filter-header">
@@ -177,7 +177,7 @@
                         <i class="fa-solid fa-magnifying-glass" id="search-btn"></i>
                     </div>
                 </div>
-        
+
                 <!-- Filter Buttons (Hidden by Default) -->
                 <div class="filter-buttons hidden" id="filterButtons">
                     <button class="filter-btn active" data-filter="all">All</button>
@@ -186,37 +186,46 @@
                     <button class="filter-btn" data-filter="games">Games</button>
                 </div>
             </div>
-        
+
             <!-- Projects Grid -->
             <div class="project-item" data-category="websites" data-name="eti website">
-        <img src="images/elora-tech-institute-preview.png" alt="ETI Website Preview" class="project-img" />
-        <h3>Elora Tech Institute (ETI)</h3>
-        <p>The official website of ETI, designed to showcase programs, certifications, and the long-term vision of creating a physical and online tech academy for all ages.</p>
-        <a href="https://elorapeter.github.io/Elora-Tech-Institute/" target="_blank" class="project-link">
-            <i class="fa-brands fa-github"></i> View on GitHub
-        </a>
-    </div>
+                <img src="images/elora-tech-institute-preview.png" alt="ETI Website Preview" class="project-img" />
+                <h3>Elora Tech Institute (ETI)</h3>
+                <p>The official website of ETI, designed to showcase programs, certifications, and the long-term vision
+                    of creating a physical and online tech academy for all ages.</p>
+                <a href="https://elorapeter.github.io/Elora-Tech-Institute/" target="_blank" class="project-link">
+                    <i class="fa-brands fa-github"></i> View on GitHub
+                </a>
+            </div>
             <div class="projects-grid" id="projectsGrid">
                 <div class="project-item" data-category="websites" data-name="dis website">
-                    <img src="images/datainsightsolution.com_index.html.png" alt="Dis Website Preview" class="project-img" />
+                    <img src="images/datainsightsolution.com_index.html.png" alt="Dis Website Preview"
+                        class="project-img" />
                     <h3>Data Insight Solutions Ltd</h3>
-                    <p>A sleek, modern website crafted to deliver a seamless and visually stunning online experience, with intuitive navigation and responsive design across all devices.</p>
+                    <p>A sleek, modern website crafted to deliver a seamless and visually stunning online experience,
+                        with intuitive navigation and responsive design across all devices.</p>
                     <a href="https://elorapeter.github.io/DIS/" target="_blank" class="project-link">
                         <i class="fa-brands fa-github"></i> View on GitHub
                     </a>
                 </div>
                 <div class="project-item" data-category="websites" data-name="brown builds website">
-                    <img src="images/brownbuilds.png2.png homepage.png" alt="Brown Builds Website Preview" class="project-img" />
+                    <img src="images/brownbuilds.png2.png homepage.png" alt="Brown Builds Website Preview"
+                        class="project-img" />
                     <h3>Brown Builds Construction</h3>
-                    <p>A bold and creative digital showcase for Brown Builds, featuring dynamic layouts and vivid imagery to highlight their top-tier building services with flair.</p>
+                    <p>A bold and creative digital showcase for Brown Builds, featuring dynamic layouts and vivid
+                        imagery to highlight their top-tier building services with flair.</p>
                     <a href="https://elorapeter.github.io/brown-builds/" target="_blank" class="project-link">
                         <i class="fa-brands fa-github"></i> View on GitHub
                     </a>
                 </div>
                 <div class="project-item" data-category="websites" data-name="elora academy">
-                    <img src="images/elorapeter.github.io_Elora-Academy_.png" alt="Elora Academy Preview" class="project-img" />
+                    <img src="images/elorapeter.github.io_Elora-Academy_.png" alt="Elora Academy Preview"
+                        class="project-img" />
                     <h3>Elora Tech Academy</h3>
-                    <p>A vibrant online learning platform hosted on GitHub Pages, Elora Academy brings education to life with a clean, user-friendly interface. Built with HTML, CSS, and JavaScript, it offers intuitive navigation, engaging visuals, and responsive design, empowering learners with resources, tutorials, and interactive tools to spark curiosity and growth.</p>
+                    <p>A vibrant online learning platform hosted on GitHub Pages, Elora Academy brings education to life
+                        with a clean, user-friendly interface. Built with HTML, CSS, and JavaScript, it offers intuitive
+                        navigation, engaging visuals, and responsive design, empowering learners with resources,
+                        tutorials, and interactive tools to spark curiosity and growth.</p>
                     <a href="https://elorapeter.github.io/Elora-Academy/" target="_blank" class="project-link">
                         <i class="fa-brands fa-github"></i> View on GitHub
                     </a>
@@ -224,7 +233,8 @@
                 <div class="project-item" data-category="websites" data-name="glassmorphic website">
                     <img src="images/glassmorphic 2 edit.png" alt="Glassmorphic Website Preview" class="project-img" />
                     <h3>Glassmorphic Website</h3>
-                    <p>An innovative site embracing the glassmorphism UI trend, with frosted glass effects, subtle gradients, and smooth animations for a futuristic, elegant user experience.</p>
+                    <p>An innovative site embracing the glassmorphism UI trend, with frosted glass effects, subtle
+                        gradients, and smooth animations for a futuristic, elegant user experience.</p>
                     <a href="https://elorapeter.github.io/Glassmorphic-sidebar/" target="_blank" class="project-link">
                         <i class="fa-brands fa-github"></i> View on GitHub
                     </a>
@@ -232,8 +242,10 @@
                 <div class="project-item" data-category="graphics" data-name="graphics">
                     <img src="images/ELORA’S.jpg" alt="Flyers Preview" class="project-img" />
                     <h3>Graphics</h3>
-                    <p>A collection of eye-catching flyers designed for diverse events, blending vibrant colors, striking typography, and clever layouts to grab attention and spark interest.</p>
-                    <a href="#" class="video-link project-link" data-video="images/ELORA’S.mp4"><i class="fa-solid fa-video"></i> Watch My Video</a>
+                    <p>A collection of eye-catching flyers designed for diverse events, blending vibrant colors,
+                        striking typography, and clever layouts to grab attention and spark interest.</p>
+                    <a href="#" class="video-link project-link" data-video="images/ELORA’S.mp4"><i
+                            class="fa-solid fa-video"></i> Watch My Video</a>
 
                     <div class="modal" id="videoModal">
                         <div class="modal-content">
@@ -241,7 +253,8 @@
                                 <source src="" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
-                            <a href="#" download class="btn btn2 video-download" style="margin-top: 1rem; display: block; text-align: center;">Download Video</a>
+                            <a href="#" download class="btn btn2 video-download"
+                                style="margin-top: 1rem; display: block; text-align: center;">Download Video</a>
                         </div>
                     </div>
                 </div>
@@ -256,7 +269,10 @@
                 <div class="project-item" data-category="websites" data-name="elora peter portfolio">
                     <img src="images/main portfolio.png" alt="Elora Inspire Portfolio Preview" class="project-img" />
                     <h3>Elora Peter's Portfolio</h3>
-                    <p>My personal portfolio website, a digital canvas reflecting my creative journey. Built with HTML, CSS, and JavaScript, it showcases my best projects, certificates, and skills through a sleek, responsive design with interactive elements like dark mode toggles, scroll-triggered animations, and modal popups for a seamless user experience.</p>
+                    <p>My personal portfolio website, a digital canvas reflecting my creative journey. Built with HTML,
+                        CSS, and JavaScript, it showcases my best projects, certificates, and skills through a sleek,
+                        responsive design with interactive elements like dark mode toggles, scroll-triggered animations,
+                        and modal popups for a seamless user experience.</p>
                     <a href="https://elorapeter.github.io/My-main-portfolio/" target="_blank" class="project-link">
                         <i class="fa-brands fa-github"></i> View on GitHub
                     </a>
@@ -264,21 +280,28 @@
                 <div class="project-item" data-category="websites" data-name="elora's vercel portfolio">
                     <img src="images/vercel portfolio.png" alt="Elora's Vercel Portfolio Preview" class="project-img" />
                     <h3>Elora's Portfolio 2</h3>
-                    <p>A dynamic portfolio site hosted on Vercel, showcasing my latest projects with a modern, minimalist design. Built using HTML, CSS, and JavaScript, it features smooth animations, a responsive layout, and a focus on performance, delivering an engaging experience across devices while highlighting my creative and technical skills.</p>
-                    <a href="https://portfolio-eloras-projects-da0df9d6.vercel.app/" target="_blank" class="project-link">
+                    <p>A dynamic portfolio site hosted on Vercel, showcasing my latest projects with a modern,
+                        minimalist design. Built using HTML, CSS, and JavaScript, it features smooth animations, a
+                        responsive layout, and a focus on performance, delivering an engaging experience across devices
+                        while highlighting my creative and technical skills.</p>
+                    <a href="https://portfolio-eloras-projects-da0df9d6.vercel.app/" target="_blank"
+                        class="project-link">
                         <i class="fa-brands fa-github"></i> View on GitHub
                     </a>
                 </div>
                 <div class="project-item" data-category="websites" data-name="school & university website">
-                    <img src="images/multipage university website edit.png" alt="School & University Website Preview" class="project-img" />
+                    <img src="images/multipage university website edit.png" alt="School & University Website Preview"
+                        class="project-img" />
                     <h3>School/University Website</h3>
-                    <p>A comprehensive, user-friendly website tailored for educational institutions, with clean design, easy navigation, and features like event calendars and resource hubs.</p>
-                    <a href="https://elorapeter.github.io/university-website-template/" target="_blank" class="project-link">
+                    <p>A comprehensive, user-friendly website tailored for educational institutions, with clean design,
+                        easy navigation, and features like event calendars and resource hubs.</p>
+                    <a href="https://elorapeter.github.io/university-website-template/" target="_blank"
+                        class="project-link">
                         <i class="fa-brands fa-github"></i> View on GitHub
                     </a>
                 </div>
             </div>
-        
+
             <!-- View More/View Less Button -->
             <div class="view-more-container">
                 <button id="viewMoreBtn" class="view-more-btn">View More</button>
@@ -291,18 +314,26 @@
                 <div class="row">
                     <div class="contact-left">
                         <h2 class="sub-title">Contact Me</h2>
-                        <p><i class="fa-solid fa-paper-plane"></i> <a href="mailto:florenceonyi09@gmail.com">florenceonyi09@gmail.com</a></p>
+                        <p><i class="fa-solid fa-paper-plane"></i> <a
+                                href="mailto:florenceonyi09@gmail.com">florenceonyi09@gmail.com</a></p>
                         <p><i class="fa-solid fa-square-phone"></i> +2348105769233</p>
                         <div class="social-icons">
-                            <a href="https://www.facebook.com/florence.ofuokwu.71" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                            <a href="https://codepen.io/EloraPeter" target="_blank"><i class="fa-brands fa-codepen"></i></a>
-                            <a href="https://x.com/EloraPeter?t=csWjtGJeGUWVloDn60QCMg&s=09" target="_blank"><i class="fa-brands fa-twitter-square"></i></a>
-                            <a href="http://www.youtube.com/@florenceofuokwu5679" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                            <a href="https://www.linkedin.com/in/florence-ofuokwu-908129316/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="https://github.com/EloraPeter" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.facebook.com/florence.ofuokwu.71" target="_blank"><i
+                                    class="fa-brands fa-facebook"></i></a>
+                            <a href="https://codepen.io/EloraPeter" target="_blank"><i
+                                    class="fa-brands fa-codepen"></i></a>
+                            <a href="https://x.com/EloraPeter?t=csWjtGJeGUWVloDn60QCMg&s=09" target="_blank"><i
+                                    class="fa-brands fa-twitter-square"></i></a>
+                            <a href="http://www.youtube.com/@florenceofuokwu5679" target="_blank"><i
+                                    class="fa-brands fa-youtube"></i></a>
+                            <a href="https://www.linkedin.com/in/florence-ofuokwu-908129316/" target="_blank"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/EloraPeter" target="_blank"><i
+                                    class="fa-brands fa-github"></i></a>
                         </div>
                         <a href="images/CV.pdf" download class="btn btn2">Download CV</a>
-                        <a href="https://github.com/EloraPeter?tab=repositories" target="_blank" class="btn btn2">View My GitHub</a>
+                        <a href="https://github.com/EloraPeter?tab=repositories" target="_blank" class="btn btn2">View
+                            My GitHub</a>
                     </div>
                     <div class="contact-right">
                         <form id="contactForm" name="submit-to-google-sheet">
@@ -314,14 +345,14 @@
                         <span id="msg"></span>
                     </div>
                 </div>
-               
+
             </div>
-            
+
         </section>
     </main>
 
     <div class="copyright">
-        <p>Copyright © Elora Inspire 2025.</p> 
+        <p>Copyright © Elora Inspire 2025.</p>
         <p id="designer">Made with <i class="fa-regular fa-heart"></i> by Elora Peter</p>
     </div>
 
