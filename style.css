@@ -613,9 +613,9 @@ body.dark .skill-item {
     border-radius: 10px;
     border: 1px solid var(--accent-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: block;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease,
-        height 0.5s ease;
+    /* display: block; */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
+       
     /* height: auto;
     overflow: hidden; */
 }
@@ -640,7 +640,7 @@ body.dark .skill-item {
 }
 
 .project-item h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 500;
     color: var(--text-color);
     margin-bottom: 0.5rem;
