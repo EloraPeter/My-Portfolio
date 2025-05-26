@@ -670,6 +670,25 @@ body.dark .skill-item {
     color: var(--accent-color);
 }
 
+body.dark .project-item {
+    background: var(--bg-color);
+    border-color: var(--primary-color);
+}
+
+body.dark .project-item h3,
+body.dark .project-item p {
+    color: var(--text-color);
+}
+
+body.dark .project-link {
+    color: var(--primary-color);
+}
+
+body.dark .project-link:hover {
+    color: var(--accent-color);
+}
+
+
 .modal {
     display: none;
     position: fixed;
@@ -707,17 +726,17 @@ body.dark .modal-content {
 }
 
 /* View More Button */
-.view-more-container {
+/* .view-more-container {
     text-align: center;
-}
+} */
 
 .view-more-btn {
     padding: 10px 25px;
     border: none;
     border-radius: 25px;
     background: var(--primary-color);
-    color: white;
-    font-weight: 600;
+    color: var(--bg-color);
+    font-weight: 500;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
