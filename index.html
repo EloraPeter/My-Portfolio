@@ -331,6 +331,108 @@
         </section>
 
 
+        <!-- Projects Section -->
+        <section id="projects" class="container">
+            <h2>Projects</h2>
+            <div class="filter-container">
+                <div class="filter-header">
+                    <i class="fa-solid fa-filter" id="toggleFilter" aria-label="Toggle filters"></i>
+                    <div class="search-wrapper">
+                        <input type="text" id="searchInput" placeholder="Search projects..."
+                            aria-label="Search projects" />
+                        <i class="fa-solid fa-magnifying-glass" id="search-btn" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="filter-buttons hidden" id="filterButtons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="websites">Websites</button>
+                    <button class="filter-btn" data-filter="graphics">Graphics</button>
+                    <button class="filter-btn" data-filter="games">Games</button>
+                </div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-item" data-category="websites" data-name="eti website">
+                    <img src="images/elora-tech-institute-preview.png" alt="ETI Website Preview" class="project-img" />
+                    <h3>Elora Tech Institute</h3>
+                    <p>Official ETI website showcasing programs and certifications.</p>
+                    <a href="https://elorapeter.github.io/Elora-Tech-Institute/" target="_blank" class="project-link"><i
+                            class="fa-brands fa-github"></i> View on GitHub</a>
+                </div>
+                <div class="project-item" data-category="websites" data-name="dis website">
+                    <img src="images/datainsightsolution.com_index.html.png" alt="DIS Website Preview"
+                        class="project-img" />
+                    <h3>Data Insight Solutions</h3>
+                    <p>Modern website with responsive design and intuitive navigation.</p>
+                    <a href="https://elorapeter.github.io/DIS/" target="_blank" class="project-link"><i
+                            class="fa-brands fa-github"></i> View on GitHub</a>
+                </div>
+                <div class="project-item" data-category="websites" data-name="brown builds website">
+                    <img src="images/brownbuilds.png" alt="Brown Builds Website Preview" class="project-img" />
+                    <h3>Brown Builds Construction</h3>
+                    <p>Creative digital platform for construction services.</p>
+                    <a href="https://elorapeter.github.io/brown-builds/" target="_blank" class="project-link"><i
+                            class="fa-brands fa-github"></i> View on GitHub</a>
+                </div>
+                <div class="project-item" data-category="websites" data-name="elora academy">
+                    <img src="images/elorapeter.github.io_Elora-Academy_.png" alt="Elora Academy Preview"
+                        class="project-img" />
+                    <h3>Elora Tech Academy</h3>
+                    <p>User-friendly online learning platform with vibrant design.</p>
+                    <a href="https://elorapeter.github.io/Elora-Academy/" target="_blank" class="project-link"><i
+                            class="fa-brands fa-github"></i> View on GitHub</a>
+                </div>
+                <div class="project-item" data-category="websites" data-name="glassmorphic website">
+                    <img src="images/glassmorphic.png" alt="Glassmorphic Website Preview" class="project-img" />
+                    <h3>Glassmorphic Website</h3>
+                    <p>Innovative site with frosted glass effects.</p>
+                    <a href="https://elorapeter.github.io/Glassmorphic-sidebar/" target="_blank" class="project-link"><i
+                            class="fa-brands fa-github"></i> View on GitHub</a>
+                </div>
+                <div class="project-item" data-category="graphics" data-name="graphics">
+                    <img src="images/ELORA’S.jpg" alt="Flyers Preview" class="project-img" />
+                    <h3>Graphic Flyers</h3>
+                    <p>Eye-catching event flyers with vibrant typography.</p>
+                    <a href="#" class="video-link project-link" data-video="images/ELORA’S.mp4"><i
+                            class="fa-solid fa-video"></i> Watch Video</a>
+                </div>
+                <div class="project-item" data-category="websites" data-name="elora peter portfolio">
+                    <img src="images/main portfolio.png" alt="Portfolio Preview" class="project-img" />
+                    <h3>Personal Portfolio</h3>
+                    <p>Sleek portfolio showcasing projects and skills.</p>
+                    <a href="https://elorapeter.github.io/My-main-portfolio/" target="_blank" class="project-link"><i
+                            class="fa-brands fa-github"></i> View on GitHub</a>
+                </div>
+                <div class="project-item" data-category="websites" data-name="elora's vercel portfolio">
+                    <img src="images/vercel portfolio.png" alt="Vercel Portfolio Preview" class="project-img" />
+                    <h3>Portfolio on Vercel</h3>
+                    <p>Dynamic portfolio with modern animations.</p>
+                    <a href="https://portfolio-eloras-projects-da0df9d6.vercel.app/" target="_blank"
+                        class="project-link"><i class="fa-brands fa-github"></i> View on GitHub</a>
+                </div>
+                <div class="project-item" data-category="websites" data-name="school website">
+                    <img src="images/multipage university website.png" alt="School Website Preview"
+                        class="project-img" />
+                    <h3>Educational Website</h3>
+                    <p>User-friendly site for schools and universities.</p>
+                    <a href="https://elorapeter.github.io/university-website-template/" target="_blank"
+                        class="project-link"><i class="fa-brands fa-github"></i> View on GitHub</a>
+                </div>
+            </div>
+            <div class="view-more-container text-center mt-6">
+                <button id="viewMoreBtn" class="view-more-btn">View More</button>
+            </div>
+            <div class="modal" id="videoModal" role="dialog" aria-label="Video Modal">
+                <div class="modal-content">
+                    <video width="100%" controls>
+                        <source src="" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <a href="#" download class="mt-4 video-download btn btn2">Download Video</a>
+                </div>
+            </div>
+        </section>
+
+
         <!-- Contact Section -->
         <!-- Contact Section -->
         <section id="contact" class="container">

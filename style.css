@@ -752,34 +752,6 @@ body.dark .modal-content {
     transform: scale(0.95);
 }
 
-/* Dark Mode Adjustments */
-body.dark .project-item {
-    background: var(--primary-color);
-}
-
-body.dark .project-item h3,
-body.dark .project-item p {
-    color: var(--bg-color);
-}
-
-body.dark .project-link {
-    color: var(--accent-color);
-}
-
-body.dark .project-link:hover {
-    color: var(--bg-color);
-}
-
-body.dark .filter-btn {
-    background: var(--accent-color);
-    color: var(--text-color);
-}
-
-body.dark .filter-btn:hover,
-body.dark .filter-btn.active {
-    background: var(--primary-color);
-    color: var(--bg-color);
-}
 
 body.dark .view-more-btn {
     background: var(--primary-color);
