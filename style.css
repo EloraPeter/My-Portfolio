@@ -2,17 +2,15 @@
 :root {
     --bg-color: #f5f5dc;
     /* Beige */
-    --primary-color-rgb: 255, 182, 193;
-    /* #ffb6c1 in RGB */
-    --primary-color: #ffb6c1;
-    /* Baby Pink */
-    --accent-color: #d3d3d3;
-    /* Soft Gray */
-    --text-color: #333;
-    --background: linear-gradient(rgba(255, 182, 193, 0.3),
-            rgba(211, 211, 211, 0.5)),
-        url(images/hero.webp);
-    /* opacity levels */
+    --primary-color-rgb: 216, 167, 177;
+    /* #d8a7b1 in RGB */
+    --primary-color: #d8a7b1;
+    /* Mauve */
+    --accent-color: #a8b5b7;
+    /* Slate Gray */
+    --text-color: #2a2a2a;
+    /* Dark Charcoal */
+    --background: linear-gradient(rgba(216, 167, 177, 0.2), rgba(168, 181, 183, 0.4)), url(images/hero.webp);
     --opacity1: 0.1;
     --opacity2: 0.2;
     --opacity3: 0.3;
@@ -26,14 +24,16 @@
 
 /* Dark Mode Variables */
 body.dark {
-    --bg-color: #333;
-    --primary-color: #d98695;
-    --primary-color-rgb: 217, 134, 149;
-    /* #D98695 in RGB */
-    --accent-color: #555;
-    --text-color: #eee;
-    --background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5)),
-        url(images/hero.webp);
+    --bg-color: #2a2a2a;
+    /* Charcoal */
+    --primary-color: #b5838d;
+    /* Muted Coral */
+    --primary-color-rgb: 181, 131, 141;
+    --accent-color: #6b7280;
+    /* Dark Slate */
+    --text-color: #e5e7eb;
+    /* Light Gray */
+    --background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url(images/hero.webp);
 }
 
 * {
@@ -41,13 +41,23 @@ body.dark {
     padding: 0;
 }
 
+h1, h2, h3{
+   font-family: 'Inter', sans-serif; 
+}
+
 body {
     font-family: "Poppins", sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
-    line-height: 1.6;
+    line-height: 1.7;
     overflow-x: hidden;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
 }
 
 header {
