@@ -485,11 +485,14 @@ body.dark .skill-item {
 
 /* Projects Section */
 #projects {
+    padding: 5rem 0;
     animation: fadeIn 2s ease-out;
-    margin: 0 30px 20px 30px;
+    /* margin: 0 30px 20px 30px; */
 }
 
 #projects h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
     margin-bottom: 1rem;
     text-align: center;
 }
@@ -499,7 +502,7 @@ body.dark .skill-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 1rem;
     margin: 0 10px 20px 0;
 }
 
