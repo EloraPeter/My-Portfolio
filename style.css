@@ -827,11 +827,11 @@ body.dark .testimonial-item {
 }
 
 #contact .sub-title {
-    font-size: 4rem;
+    font-size: 3rem;
     color: var(--text-color);
     margin-bottom: 2rem;
-    text-align: left;
-    font-weight: bold;
+    font-weight: 700;
+    text-align: center;
 }
 
 .contact-right {
