@@ -305,11 +305,12 @@ transition: transform 0.3s ease, opacity 0.3s ease;}
 
 .social-links a:hover {
     transform: translateY(-8px);
+    opacity: 0.9;
 }
 
 /* About Section */
 #about {
-    padding: 2rem;
+    padding: 3.5rem;
     transform: translateY(40px);
     opacity: 0;
     transition: transform 1.5s ease-out, opacity 1.5s ease-out;
@@ -321,8 +322,10 @@ transition: transform 0.3s ease, opacity 0.3s ease;}
 }
 
 #about h2 {
-    font-size: 2.7rem;
+    font-size: 2.4rem;
     margin-bottom: 1rem;
+    font-weight: 700;
+    text-align: center;
 }
 
 #about p {
