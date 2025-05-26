@@ -247,7 +247,7 @@ nav a:hover {
     border: none;
     outline: none;
     cursor: pointer;
-    transition: 0.3s ease-in;
+     transition: transform 0.3s ease, opacity 0.3s ease;
     margin: 15px 0px;
 }
 
@@ -301,8 +301,7 @@ nav a:hover {
     height: 40px;
     background: var(--primary-color);
     border: 1px solid #3b3b3b;
-    transition: 0.4s ease;
-}
+transition: transform 0.3s ease, opacity 0.3s ease;}
 
 .social-links a:hover {
     transform: translateY(-8px);
