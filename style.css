@@ -951,6 +951,7 @@ form .btn2 {
     margin-top: 1rem;
     color: var(--text-color);
     font-size: 1rem;
+    text-align: center;
 }
 
 .copyright {
