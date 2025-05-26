@@ -882,8 +882,8 @@ body.dark .testimonial-item {
 .btn.btn2 {
     display: inline-block;
     background: var(--primary-color);
-    padding: 14px 60px;
-    font-size: 18px;
+    padding: 0.75rem 2rem;
+    font-size: 16px;
     color: var(--bg-color);
     border: none;
     border-radius: 6px;
@@ -1064,17 +1064,16 @@ form .btn2 {
     }
 
     #hero .btn {
-        display: flex;
+        
         flex-direction: column;
-        /* Stack buttons vertically */
-        align-items: center;
+       
         gap: 0.5rem;
     }
 
     #hero .btn button {
         font-size: 14px;
         padding: 8px 20px;
-        width: 80%;
+        width: 100%;
         /* Ensure buttons don't stretch too wide */
         max-width: 200px;
         /* Cap width for consistency */
