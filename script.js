@@ -249,6 +249,7 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.addEventListener("click", (e) => {
         if (e.target === modal) {
             modal.style.display = "none";
+             modal.querySelector("video").pause();
         }
     });
 });
