@@ -187,7 +187,7 @@ nav a:hover {
 /* Hero Section */
 #hero {
     text-align: left;
-    padding: 3rem 1rem;
+    padding: 4rem 0;
     background: var(--background);
     animation: fadeIn 2s ease-out;
     height: 90vh;
@@ -208,7 +208,7 @@ nav a:hover {
 }
 
 #hero .hero-container {
-    margin: 15% 0 0 40%;
+    margin: 10% auto 40%;
     transform: translateX(100%);
     opacity: 0;
     animation: flyIn 1.5s ease-out forwards;
@@ -228,17 +228,19 @@ nav a:hover {
 }
 
 #hero h2 {
-    font-size: 2.7rem;
+    font-size: 2.5rem;
+    font-weight: 700;
     margin-bottom: 0.8rem;
 }
 
 #hero p {
     font-size: 1.3rem;
+    font-weight: 400;
 }
 
 #hero .btn button {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     padding: 12px 24px;
     border-radius: 6px;
     color: var(--text-color);
