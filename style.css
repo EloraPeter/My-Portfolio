@@ -945,6 +945,7 @@ form .btn2 {
     padding: 14px 60px;
     margin-top: 20px;
     align-self: flex-start;
+    width: 100%;
 }
 
 #msg {
@@ -1074,9 +1075,7 @@ form .btn2 {
         font-size: 14px;
         padding: 8px 20px;
         width: 100%;
-        /* Ensure buttons don't stretch too wide */
-        max-width: 200px;
-        /* Cap width for consistency */
+       
     }
 
     .social-links {
@@ -1234,7 +1233,6 @@ form .btn2 {
 
     #hero .btn button {
         font-size: 15px;
-        padding: 10px 20px;
     }
 
     #about h2,
