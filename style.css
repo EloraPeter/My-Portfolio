@@ -41,8 +41,10 @@ body.dark {
     padding: 0;
 }
 
-h1, h2, h3{
-   font-family: 'Inter', sans-serif; 
+h1,
+h2,
+h3 {
+    font-family: 'Inter', sans-serif;
 }
 
 body {
@@ -65,7 +67,7 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 1.25rem 2rem;
     background: var(--primary-color);
     position: sticky;
     top: 0;
@@ -89,7 +91,8 @@ header h1 {
 nav {
     display: flex;
     align-items: center;
-    transition: transform 0.5s ease-in-out; /* Smooth transition for opening/closing */
+    transition: transform 0.5s ease-in-out;
+    /* Smooth transition for opening/closing */
 }
 
 nav a {
@@ -122,7 +125,8 @@ nav a:hover {
 }
 
 .hamburger.active i.fa-bars::before {
-    content: "\f00d"; /* Font Awesome "X" icon */
+    content: "\f00d";
+    /* Font Awesome "X" icon */
 }
 
 .dark-mode-toggle {
@@ -157,12 +161,14 @@ nav a:hover {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        transform: translateX(100%); /* Hidden by default */
+        transform: translateX(100%);
+        /* Hidden by default */
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
     }
 
     nav.active {
-        transform: translateX(0); /* Slide in when active */
+        transform: translateX(0);
+        /* Slide in when active */
     }
 
     nav a {
@@ -1188,9 +1194,9 @@ form .btn2 {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
-    .c-item{
+    .c-item {
         width: 90%;
-  padding: 0 20px;
+        padding: 0 20px;
     }
 
     .projects-grid {
