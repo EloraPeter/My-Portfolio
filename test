@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Section</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Inherit site-wide CSS variables */
+        :root {
+            --bg-color: #f5f5dc;
+            --primary-color-rgb: 216, 167, 177;
+            --primary-color: #d8a7b1;
+            --accent-color: #a8b5b7;
+            --text-color: #2a2a2a;
+            --opacity8: 0.8;
+        }
+
+        body.dark {
+            --bg-color: #2a2a2a;
+            --primary-color: #b5838d;
+            --primary-color-rgb: 181, 131, 141;
+            --accent-color: #6b7280;
+            --text-color: #e5e7eb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #pricing {
+            padding: 60px 20px;
+            max-width: 1280px;
+            margin: 0 auto;
+            background: var(--bg-color);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #pricing h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            position: relative;
+        }
+
+        #pricing h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+        }
+
+        .pricing-tabs {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .tab-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .tab-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 25px;
+            background: var(--accent-color);
+            color: var(--text-color);
+            border: none;
+            border-radius: 30px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+        }
+
+        .tab-btn:hover {
+            background: var(--primary-color);
+            color: var(--bg-color);
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab-btn.active {
+            background: var(--primary-color);
+            color: var(--bg-color);
+            transform: scale(1.05);
+        }
+
+        .tab-content {
+            background: var(--bg-color);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border: 1px solid var(--accent-color);
+        }
+
+        .tab-pane {
+            display: none;
+            opacity: 0;
+        }
+
+        .tab-pane.active {
+            display: block;
+            animation: flyIn 0.5s ease-out forwards;
+        }
+
+        @keyframes flyIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .price {
+            font-size: 2rem;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .price span {
+            font-size: 1rem;
+            color: var(--accent-color);
+        }
+
+        .features {
+            list-style: none;
+            margin-bottom: 20px;
+            padding: 0 20px;
+        }
+
+        .features li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(var(--accent-color), var(--opacity8));
+            text-align: center;
+            color: var(--text-color);
+            transition: color 0.3s ease;
+        }
+
+        .features li:hover {
+            color: var(--primary-color);
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background 0.3s ease, transform 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .btn-email {
+            background: var(--accent-color);
+            color: var(--text-color);
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-email:hover {
+            background: var(--primary-color);
+            color: var(--bg-color);
+            transform: scale(1.05);
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: #fff;
+            border: none;
+        }
+
+        .btn-whatsapp:hover {
+            background: #1EBE57;
+            transform: scale(1.05);
+        }
+
+        body.dark .btn-email {
+            color: var(--text-color);
+        }
+
+        body.dark .btn-email:hover {
+            color: var(--bg-color);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 750px) {
+            #pricing {
+                padding: 40px 15px;
+            }
+
+            #pricing h2 {
+                font-size: 2rem;
+            }
+
+            .tab-list {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .tab-btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+                font-size: 0.95rem;
+                padding: 10px 20px;
+            }
+
+            .tab-content {
+                padding: 20px;
+            }
+
+            .price {
+                font-size: 1.8rem;
+            }
+
+            .features li {
+                font-size: 0.9rem;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 320px) {
+            #pricing h2 {
+                font-size: 1.75rem;
+            }
+
+            .price {
+                font-size: 1.5rem;
+            }
+
+            .tab-btn {
+                font-size: 0.85rem;
+                padding: 8px 15px;
+            }
+
+            .features li {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="pricing">
+        <h2>Our Pricing Plans</h2>
+        <div class="pricing-tabs">
+            <ul class="tab-list">
+                <li><button class="tab-btn active" data-tab="web"><i class="fas fa-globe"></i> Web Development</button></li>
+                <li><button class="tab-btn" data-tab="graphic"><i class="fas fa-paint-brush"></i> Graphic Design</button></li>
+                <li><button class="tab-btn" data-tab="uiux"><i class="fas fa-desktop"></i> UI/UX Design</button></li>
+                <li><button class="tab-btn" data-tab="aiads"><i class="fas fa-robot"></i> AI Ads</button></li>
+                <li><button class="tab-btn" data-tab="training"><i class="fas fa-graduation-cap"></i> Training Courses</button></li>
+            </ul>
+            <div class="tab-content">
+                <div id="web" class="tab-pane active">
+                    <div class="price">Starting from ₦500,000 <span>($332 USD)</span></div>
+                    <ul class="features">
+                        <li>Basic Informational Website: ₦500,000 ($332)</li>
+                        <li>E-commerce Site: ₦1,000,000 ($665)</li>
+                        <li>Custom Web App: ₦1,500,000+ ($997+)</li>
+                    </ul>
+                    <div class="contact-buttons">
+                        <a href="mailto:your.email@example.com?subject=Inquiry%20about%20Web%20Development" class="btn btn-email"><i class="fas fa-envelope"></i> Email Us</a>
+                        <a href="https://wa.me/234yourphonenumber?text=I'm%20interested%20in%20Web%20Development" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+                <div id="graphic" class="tab-pane">
+                    <div class="price">Starting from ₦50,000 <span>($33 USD)</span></div>
+                    <ul class="features">
+                        <li>Logo Design: ₦100,000 ($66)</li>
+                        <li>Flyers: ₦50,000 ($33)</li>
+                        <li>Banners: ₦80,000 ($53)</li>
+                    </ul>
+                    <div class="contact-buttons">
+                        <a href="mailto:your.email@example.com?subject=Inquiry%20about%20Graphic%20Design" class="btn btn-email"><i class="fas fa-envelope"></i> Email Us</a>
+                        <a href="https://wa.me/234yourphonenumber?text=I'm%20interested%20in%20Graphic%20Design" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+                <div id="uiux" class="tab-pane">
+                    <div class="price">₦300,000 <span>($199 USD)</span></div>
+                    <ul class="features">
+                        <li>Wireframing & Prototyping</li>
+                        <li>User Experience Optimization</li>
+                        <li>Custom Interface Design</li>
+                    </ul>
+                    <div class="contact-buttons">
+                        <a href="mailto:your.email@example.com?subject=Inquiry%20about%20UI/UX%20Design" class="btn btn-email"><i class="fas fa-envelope"></i> Email Us</a>
+                        <a href="https://wa.me/234yourphonenumber?text=I'm%20interested%20in%20UI/UX%20Design" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+                <div id="aiads" class="tab-pane">
+                    <div class="price">₦200,000 <span>($133 USD)</span></div>
+                    <ul class="features">
+                        <li>AI-Generated Ad Campaigns</li>
+                        <li>Targeted Advertising Strategies</li>
+                        <li>Performance Analytics</li>
+                    </ul>
+                    <div class="contact-buttons">
+                        <a href="mailto:your.email@example.com?subject=Inquiry%20about%20AI%20Ads" class="btn btn-email"><i class="fas fa-envelope"></i> Email Us</a>
+                        <a href="https://wa.me/234yourphonenumber?text=I'm%20interested%20in%20AI%20Ads" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+                <div id="training" class="tab-pane">
+                    <div class="price">₦150,000 <span>($100 USD)</span></div>
+                    <ul class="features">
+                        <li>Web Development Course</li>
+                        <li>Graphic Design Training</li>
+                        <li>UI/UX Mastery</li>
+                    </ul>
+                    <div class="contact-buttons">
+                        <a href="mailto:your.email@example.com?subject=Inquiry%20about%20Training%20Courses" class="btn btn-email"><i class="fas fa-envelope"></i> Email Us</a>
+                        <a href="https://wa.me/234yourphonenumber?text=I'm%20interested%20in%20Training%20Courses" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.tab-btn');
+            const panes = document.querySelectorAll('.tab-pane');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active class from all tabs and panes
+                    tabs.forEach(t => t.classList.remove('active'));
+                    panes.forEach(p => p.classList.remove('active'));
+
+                    // Add active class to clicked tab and corresponding pane
+                    tab.classList.add('active');
+                    const targetPane = document.getElementById(tab.dataset.tab);
+                    if (targetPane) {
+                        targetPane.classList.add('active');
+                    } else {
+                        console.error(`Tab pane with ID ${tab.dataset.tab} not found`);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
