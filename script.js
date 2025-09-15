@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const filterBtns = document.querySelectorAll(".filter-btn");
     const viewMoreBtn = document.getElementById("viewMoreBtn");
     let isExpanded = false;
-    const initialVisibleCount = 3;    
+    const initialVisibleCount = 3;
     // Initialize all projects as visible by default
     projectItems.forEach(project => project.classList.add("visible"));
     // Function to update project visibility
@@ -249,9 +249,31 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.addEventListener("click", (e) => {
         if (e.target === modal) {
             modal.style.display = "none";
-             modal.querySelector("video").pause();
+            modal.querySelector("video").pause();
         }
     });
 });
 
 
+// pricing tab
+document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('.tab-btn');
+    const panes = document.querySelectorAll('.tab-pane');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            // Remove active class from all tabs and panes
+            tabs.forEach(t => t.classList.remove('active'));
+            panes.forEach(p => p.classList.remove('active'));
+
+            // Add active class to clicked tab and corresponding pane
+            tab.classList.add('active');
+            const targetPane = document.getElementById(tab.dataset.tab);
+            if (targetPane) {
+                targetPane.classList.add('active');
+            } else {
+                console.error(`Tab pane with ID ${tab.dataset.tab} not found`);
+            }
+        });
+    });
+});
