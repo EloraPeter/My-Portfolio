@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const filterBtns = document.querySelectorAll(".filter-btn");
     const viewMoreBtn = document.getElementById("viewMoreBtn");
     let isExpanded = false;
-    const initialVisibleCount = 3;
+    const initialVisibleCount = 4;
     // Initialize all projects as visible by default
     projectItems.forEach(project => project.classList.add("visible"));
     // Function to update project visibility
